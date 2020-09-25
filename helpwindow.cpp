@@ -13,7 +13,7 @@ HelpWindow::HelpWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QFile file("C:/Users/artem/Desktop/OOP course project/test/untitled12/database.txt");
+    QFile file("C:/Users/artem/Desktop/OOP course project/test/untitled12/.../database.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
 
