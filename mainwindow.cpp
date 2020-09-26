@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl(":/resources/sounds/original.mp3"));
+    playlist->addMedia(QUrl("qrc:/resources/sounds/Original Tetris theme (Tetris Soundtrack).mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();
