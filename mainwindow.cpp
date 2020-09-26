@@ -23,13 +23,13 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(lestWindow, &TestWindow::firstWindow, this, &MainWindow::show);
 
-    QPixmap pix("C:/Users/artem/Desktop/OOP course project/header-object.png");
+    QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
 
 
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl("C:/Users/artem/Desktop/OOP course project/Original Tetris theme (Tetris Soundtrack).mp3"));
+    playlist->addMedia(QUrl(":/resources/sounds/original.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();

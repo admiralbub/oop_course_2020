@@ -10,7 +10,7 @@ TestWindow::TestWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     //Тут грузим картинку для теста
-    QPixmap pix("C:/Users/artem/Desktop/OOP course project/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg");
+    QPixmap pix(":/resources/image/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg");
     ui->label_pic->setPixmap(pix.scaled(300,400,Qt::KeepAspectRatio));
 
 }
