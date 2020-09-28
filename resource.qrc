@@ -3,5 +3,6 @@
         <file>image/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg</file>
         <file>image/header-object.png</file>
         <file>sounds/Original Tetris theme (Tetris Soundtrack).mp3</file>
+        <file>database.txt</file>
     </qresource>
 </RCC>

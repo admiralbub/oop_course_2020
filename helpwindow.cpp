@@ -13,7 +13,7 @@ HelpWindow::HelpWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QFile file("C:/Users/artem/Desktop/OOP course project/test/untitled12/.../database.txt");
+    QFile file(":/resources/database.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
 
@@ -44,7 +44,9 @@ HelpWindow::~HelpWindow()
 void HelpWindow::update() {
     string s=db[ind][0];
     ui->label_heading->setText(QString::fromStdString(db[ind][0]));
+
     ui->label_text->setText(QString::fromStdString(db[ind][1]));
+    ui->label_text->setWordWrap(true);
 }
 void HelpWindow::on_pushButton_clicked()
 {
@@ -58,6 +60,6 @@ void HelpWindow::on_pushButton_further_clicked()
     if (++ind<num) {
          update();
     } else {
-        ui->pushButton_further->setEnabled(false);
+        ui->pushButton_further->setVisible(false);
     }
 }

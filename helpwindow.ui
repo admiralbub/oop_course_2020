@@ -15,7 +15,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #1B5EA6;
-color:#fff;</string>
+color:#fff;
+font-size:16px;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -96,7 +97,7 @@ color:#fff;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;
+     <string notr="true">font-size:15px;
 font-weight:600;
 </string>
     </property>
@@ -109,12 +110,12 @@ font-weight:600;
      <rect>
       <x>60</x>
       <y>170</y>
-      <width>541</width>
-      <height>41</height>
+      <width>671</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:12px;</string>
+     <string notr="true">font-size:14px;</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -127,7 +128,7 @@ font-weight:600;
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>27</height>
     </rect>
    </property>
   </widget>
