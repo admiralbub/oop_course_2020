@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>872</width>
-    <height>659</height>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,6 +48,8 @@ QPushButton:hover
 #pushButton:hover {
 	 background:#fff;
      cursor:pointer;
+     margin-right:12px;
+	 margin-left:12px;
 }</string>
     </property>
     <property name="text">
@@ -74,6 +76,8 @@ QPushButton:hover
 #pushButton_2:hover {
 	 background:#fff;
      cursor:pointer;
+	 margin-right:12px;
+	 margin-left:12px;
 }</string>
     </property>
     <property name="text">
@@ -100,6 +104,8 @@ QPushButton:hover
 #pushButton_3:hover {
 	 background:#fff;
      cursor:pointer;
+     margin-right:12px;
+	 margin-left:12px;
 }</string>
     </property>
     <property name="text">
@@ -126,6 +132,8 @@ QPushButton:hover
 #pushButton_4:hover {
 	 background:#fff;
      cursor:pointer;
+     margin-right:12px;
+	 margin-left:12px;
 }</string>
     </property>
     <property name="text">
@@ -170,7 +178,7 @@ font-weight:500;</string>
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>600</y>
+      <y>560</y>
       <width>201</width>
       <height>16</height>
      </rect>

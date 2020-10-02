@@ -43,10 +43,13 @@ HelpWindow::~HelpWindow()
 }
 void HelpWindow::update() {
     string s=db[ind][0];
-    ui->label_heading->setText(QString::fromStdString(db[ind][0]));
 
+    ui->label_heading->setText(QString::fromStdString(db[ind][0]));
     ui->label_text->setText(QString::fromStdString(db[ind][1]));
     ui->label_text->setWordWrap(true);
+    ui->label_text->setGeometry(60,170,670,50);
+
+
 }
 void HelpWindow::on_pushButton_clicked()
 {
