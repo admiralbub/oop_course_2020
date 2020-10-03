@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
-   background-color: #1B5EA6; 
+   background: linear-gradient(-45deg,#6193e1,#1B5EA6,#6193e1),#1B5EA6;
    color:#fff;
    cursor:pointer;
 }

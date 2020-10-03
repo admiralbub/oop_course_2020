@@ -63,6 +63,7 @@ void HelpWindow::on_pushButton_further_clicked()
     if (++ind<num) {
          update();
     } else {
-        ui->pushButton_further->setVisible(false);
+        this->close();
+        emit firstWindow();
     }
 }

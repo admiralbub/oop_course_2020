@@ -13,6 +13,8 @@ TestWindow::TestWindow(QWidget *parent) :
     QPixmap pix(":/resources/image/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg");
     ui->label_pic->setPixmap(pix.scaled(300,400,Qt::KeepAspectRatio));
 
+
+
 }
 
 TestWindow::~TestWindow()

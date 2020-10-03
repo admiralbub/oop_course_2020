@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>796</width>
-    <height>635</height>
+    <width>974</width>
+    <height>699</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@ color:#fff;</string>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>560</y>
+      <x>110</x>
+      <y>610</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -47,10 +47,10 @@ color:#fff;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>320</y>
-      <width>321</width>
-      <height>31</height>
+      <x>110</x>
+      <y>340</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -59,25 +59,22 @@ color:#fff;</string>
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
-   padding-left:30px;
    cursor:pointer;
-   text-align:left;
 }
 #pushButton_2:hover {
 	 background:#fff;
      cursor:pointer;
-	 margin-left:10px;
 }</string>
     </property>
     <property name="text">
-     <string>Т.Шевченко</string>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>100</y>
+      <x>110</x>
+      <y>120</y>
       <width>661</width>
       <height>21</height>
      </rect>
@@ -93,8 +90,8 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>160</y>
+      <x>110</x>
+      <y>180</y>
       <width>121</width>
       <height>16</height>
      </rect>
@@ -110,14 +107,15 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>200</y>
+      <x>110</x>
+      <y>220</y>
       <width>641</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;</string>
+     <string notr="true">font-size:14px;
+line-height:20px;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Lorem Ipsum - это текст-&amp;quot;рыба&amp;quot;, часто используемый в печати и вэб-дизайне.&lt;br&gt; Lorem Ipsum является стандартной &amp;quot;рыбой&amp;quot; для текстов на латинице с начала XVI века.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -126,8 +124,8 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>280</y>
+      <x>110</x>
+      <y>300</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -143,8 +141,8 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>280</y>
+      <x>550</x>
+      <y>330</y>
       <width>301</width>
       <height>241</height>
      </rect>
@@ -156,8 +154,8 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>60</y>
+      <x>110</x>
+      <y>80</y>
       <width>121</width>
       <height>16</height>
      </rect>
@@ -173,10 +171,10 @@ font-weight:600;</string>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>370</y>
-      <width>321</width>
-      <height>31</height>
+      <x>110</x>
+      <y>400</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -185,27 +183,24 @@ font-weight:600;</string>
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
-   padding-left:30px;
    cursor:pointer;
-   text-align:left;
 }
 #pushButton_3:hover {
 	 background:#fff;
      cursor:pointer;
-     margin-left:10px;
 }</string>
     </property>
     <property name="text">
-     <string>Г.Сковорода</string>
+     <string>2</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>420</y>
-      <width>321</width>
-      <height>31</height>
+      <x>110</x>
+      <y>460</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -214,27 +209,24 @@ font-weight:600;</string>
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
-   padding-left:30px;
    cursor:pointer;
-   text-align:left;
 }
 #pushButton_4:hover {
 	 background:#fff;
      cursor:pointer;
-     margin-left:10px;
 }</string>
     </property>
     <property name="text">
-     <string>П.Куліш</string>
+     <string>3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>470</y>
-      <width>321</width>
-      <height>31</height>
+      <x>110</x>
+      <y>520</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -243,18 +235,109 @@ font-weight:600;</string>
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
-   padding-left:30px;
    cursor:pointer;
-   text-align:left;
 }
 #pushButton_5:hover {
 	 background:#fff;
      cursor:pointer;
-     margin-left:10px;
 }</string>
     </property>
     <property name="text">
-     <string>І.Франко</string>
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>350</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:15px;
+font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>Тарас Шевченко</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>410</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:15px;
+font-weight:600;</string>
+    </property>
+    <property name="text">
+     <string>Тарас Шевченко</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>470</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:15px;
+font-weight:600;</string>
+    </property>
+    <property name="text">
+     <string>Тарас Шевченко</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>530</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-weight:600;
+font-size:15px;</string>
+    </property>
+    <property name="text">
+     <string>Тарас Шевченко</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>610</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_6 {
+   color:#000;
+   border-radius:5px;
+   background:#FFD200;
+   font-size:14px;
+   cursor:pointer;
+}
+#pushButton_6:hover {
+	 background:#fff;
+     cursor:pointer;
+}</string>
+    </property>
+    <property name="text">
+     <string>розпочати спочатку</string>
     </property>
    </widget>
   </widget>
@@ -263,7 +346,7 @@ font-weight:600;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>796</width>
+     <width>974</width>
      <height>21</height>
     </rect>
    </property>

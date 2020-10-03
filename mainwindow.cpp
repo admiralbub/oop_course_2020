@@ -35,8 +35,6 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(playlist);
     music->play();
-
-
 }
 
 MainWindow::~MainWindow()
