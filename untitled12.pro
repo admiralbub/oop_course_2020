@@ -19,18 +19,21 @@ SOURCES += \
     helpwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    resultwindow.cpp \
     testwindow.cpp
 
 HEADERS += \
     aboutwindow.h \
     helpwindow.h \
     mainwindow.h \
+    resultwindow.h \
     testwindow.h
 
 FORMS += \
     aboutwindow.ui \
     helpwindow.ui \
     mainwindow.ui \
+    resultwindow.ui \
     testwindow.ui
 
 # Default rules for deployment.
