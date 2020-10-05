@@ -18,7 +18,6 @@ signals:
 public:
     explicit HelpWindow(QWidget *parent = nullptr);
     ~HelpWindow();
-    void update();
 
 private slots:
     void on_pushButton_clicked();
