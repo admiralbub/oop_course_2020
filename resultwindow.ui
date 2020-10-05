@@ -53,7 +53,7 @@ color:#fff;</string>
      <rect>
       <x>60</x>
       <y>170</y>
-      <width>181</width>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
@@ -66,7 +66,7 @@ color:#fff;</string>
      <rect>
       <x>60</x>
       <y>220</y>
-      <width>181</width>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>
@@ -92,7 +92,7 @@ color:#fff;</string>
      <rect>
       <x>60</x>
       <y>320</y>
-      <width>221</width>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>
@@ -118,12 +118,13 @@ color:#fff;</string>
      <rect>
       <x>360</x>
       <y>170</y>
-      <width>51</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;</string>
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -134,12 +135,13 @@ color:#fff;</string>
      <rect>
       <x>360</x>
       <y>220</y>
-      <width>51</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;</string>
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffff00;&quot;&gt;50%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -150,12 +152,13 @@ color:#fff;</string>
      <rect>
       <x>360</x>
       <y>270</y>
-      <width>51</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;</string>
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffff00;&quot;&gt;60%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -166,12 +169,13 @@ color:#fff;</string>
      <rect>
       <x>360</x>
       <y>320</y>
-      <width>51</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:14px;</string>
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#55ff00;&quot;&gt;100%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
