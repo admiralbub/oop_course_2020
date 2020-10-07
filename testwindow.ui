@@ -124,8 +124,8 @@ font-weight:600;</string>
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>290</y>
+      <x>560</x>
+      <y>280</y>
       <width>301</width>
       <height>241</height>
      </rect>
@@ -311,7 +311,7 @@ font-size:15px;</string>
      <rect>
       <x>110</x>
       <y>160</y>
-      <width>671</width>
+      <width>761</width>
       <height>91</height>
      </rect>
     </property>
