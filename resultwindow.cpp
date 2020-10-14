@@ -6,6 +6,8 @@ ResultWindow::ResultWindow(QWidget *parent) :
     ui(new Ui::ResultWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("Результат тестування з 1 частини!");
+    setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 }
 
 ResultWindow::~ResultWindow()

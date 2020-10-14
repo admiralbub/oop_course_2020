@@ -20,13 +20,14 @@ HelpWindow::~HelpWindow()
     delete ui;
 }
 
-void HelpWindow::on_pushButton_clicked()
-{
-    this->close();
-    emit firstWindow();
-}
 
 void HelpWindow::on_pushButton_further_clicked()
 {
 
+}
+
+void HelpWindow::on_back_clicked()
+{
+    this->close();
+    emit firstWindow();
 }

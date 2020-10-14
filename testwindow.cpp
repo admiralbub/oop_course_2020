@@ -13,7 +13,10 @@ TestWindow::TestWindow(QWidget *parent) :
     QPixmap pix(":/resources/image/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg");
     ui->label_pic->setPixmap(pix.scaled(300,400,Qt::KeepAspectRatio));
 
-
+    // Инициализируем третье окно
+    resultWindow = new ResultWindow();
+    // подключаем к слоту запуска главного окна по кнопке в третьем окне
+    connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
 
 }
 
@@ -22,8 +25,30 @@ TestWindow::~TestWindow()
     delete ui;
 }
 
-void TestWindow::on_pushButton_clicked()
+void TestWindow::on_pushButton_menu_clicked()
 {
     this->close();
     emit firstWindow();
+}
+
+void TestWindow::on_answer_1_clicked()
+{
+    //Тут пишем код при нажатие на 1 ответ
+    resultWindow->show();
+    this->close();
+}
+
+void TestWindow::on_answer_2_clicked()
+{
+    //Тут пишем код при нажатие на 2 ответ
+}
+
+void TestWindow::on_answer_3_clicked()
+{
+    //Тут пишем код при нажатие на 3 ответ
+}
+
+void TestWindow::on_answer_4_clicked()
+{
+    //Тут пишем код при нажатие на 4 ответ
 }

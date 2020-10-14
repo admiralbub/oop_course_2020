@@ -14,7 +14,8 @@ class ResultWindow : public QMainWindow
 public:
     explicit ResultWindow(QWidget *parent = nullptr);
     ~ResultWindow();
-
+signals:
+    void resultWindow();
 private:
     Ui::ResultWindow *ui;
 };

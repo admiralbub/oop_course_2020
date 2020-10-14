@@ -18,7 +18,8 @@ AboutWindow::~AboutWindow()
     delete ui;
 }
 
-void AboutWindow::on_pushButton_clicked()
+
+void AboutWindow::on_back_clicked()
 {
     this->close();
     emit firstWindow();

@@ -18,7 +18,7 @@
 color:#fff;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_menu">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -28,14 +28,14 @@ color:#fff;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton {
+     <string notr="true">#pushButton_menu {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton:hover {
+#pushButton_menu:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -44,7 +44,7 @@ color:#fff;</string>
      <string>В меню</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="answer_1">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -54,14 +54,14 @@ color:#fff;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_2 {
+     <string notr="true">#answer_1 {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_2:hover {
+#answer_1:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -70,7 +70,7 @@ color:#fff;</string>
      <string>1</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_heading">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -87,7 +87,7 @@ font-weight:600;</string>
      <string>Пройдіть тест для вибору вашої майбутньої спеціальності</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_score">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -134,7 +134,7 @@ font-weight:600;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="answer_2">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -144,14 +144,14 @@ font-weight:600;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_3 {
+     <string notr="true">#answer_2 {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_3:hover {
+#answer_2:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -160,7 +160,7 @@ font-weight:600;</string>
      <string>2</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="answer_3">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -170,14 +170,14 @@ font-weight:600;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_4 {
+     <string notr="true">#answer_3 {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_4:hover {
+#answer_3:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -186,7 +186,7 @@ font-weight:600;</string>
      <string>3</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="answer_4">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -196,14 +196,14 @@ font-weight:600;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_5 {
+     <string notr="true">#answer_4 {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_5:hover {
+#answer_4:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -280,7 +280,7 @@ font-size:15px;</string>
      <string>І.Франко</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="pushButton_first">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -290,14 +290,14 @@ font-size:15px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_6 {
+     <string notr="true">#pushButton_first {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_6:hover {
+#pushButton_first:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -306,7 +306,7 @@ font-size:15px;</string>
      <string>Розпочати спочатку</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="question">
     <property name="geometry">
      <rect>
       <x>110</x>

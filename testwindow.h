@@ -2,7 +2,7 @@
 #define TESTWINDOW_H
 
 #include <QMainWindow>
-
+#include <resultwindow.h>
 namespace Ui {
 class TestWindow;
 }
@@ -19,8 +19,19 @@ signals:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_menu_clicked();
+
+    void on_answer_1_clicked();
+
+    void on_answer_2_clicked();
+
+    void on_answer_3_clicked();
+
+    void on_answer_4_clicked();
+
 private:
     Ui::TestWindow *ui;
+    ResultWindow *resultWindow;
 };
 
 #endif // TESTWINDOW_H
