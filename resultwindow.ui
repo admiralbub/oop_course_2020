@@ -35,7 +35,7 @@ color:#fff;</string>
 </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="subtitle">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -48,7 +48,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Вимогам яких ви задовольнили&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="system_1">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -61,7 +61,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Людина-техніка&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="system_2">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -74,7 +74,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Людина-людина&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="system_3">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -87,7 +87,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Людина-знакова система&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="system_4">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -100,7 +100,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Людина-художній образ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="mark">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -113,7 +113,7 @@ color:#fff;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Примітка&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="balls_1">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -130,7 +130,7 @@ font-weight:700;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="balls_2">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -147,7 +147,7 @@ font-weight:700;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffff00;&quot;&gt;50%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="balls_3">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -164,7 +164,7 @@ font-weight:700;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffff00;&quot;&gt;60%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="balls_4">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -181,7 +181,7 @@ font-weight:700;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#55ff00;&quot;&gt;100%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="system_info">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -198,7 +198,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;«Людина - художній образ» - це всі творчі спеціальності.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="first">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -208,14 +208,14 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton {
+     <string notr="true">#first {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton:hover {
+#first:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
@@ -224,7 +224,7 @@ p, li { white-space: pre-wrap; }
      <string>Пройти спочатку</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="direction">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -234,14 +234,14 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_2 {
+     <string notr="true">#direction {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_2:hover {
+#direction:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>

@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     resultwindow.cpp \
+    specialitytest.cpp \
     testwindow.cpp
 
 HEADERS += \
@@ -27,6 +28,7 @@ HEADERS += \
     helpwindow.h \
     mainwindow.h \
     resultwindow.h \
+    specialitytest.h \
     testwindow.h
 
 FORMS += \
@@ -34,6 +36,7 @@ FORMS += \
     helpwindow.ui \
     mainwindow.ui \
     resultwindow.ui \
+    specialitytest.ui \
     testwindow.ui
 
 # Default rules for deployment.

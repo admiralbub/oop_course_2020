@@ -2,32 +2,27 @@
 #include "ui_mainwindow.h"
 #include <QPixmap>
 #include <QMediaPlayer>
-MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
-{
-
-
+MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
-    // Инициализируем второе окно
+
+
+    // Инициализируем  окно о авторе
     sWindow = new AboutWindow();
-    // подключаем к слоту запуска главного окна по кнопке во втором окне
     connect(sWindow, &AboutWindow::firstWindow, this, &MainWindow::show);
 
-
-    // Инициализируем третье окно
+    // Инициализируем  окно о помощи
     thirdWindow = new HelpWindow();
-    // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(thirdWindow, &HelpWindow::firstWindow, this, &MainWindow::show);
 
-    // Инициализируем третье окно
+    // Инициализируем окно с тестами
     lestWindow = new TestWindow();
-    // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(lestWindow, &TestWindow::firstWindow, this, &MainWindow::show);
 
+    //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
 
-
-
+    //Добавляем фоновую музыку для теста
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("qrc:/resources/sounds/Original Tetris theme (Tetris Soundtrack).mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
@@ -35,22 +30,21 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(playlist);
     music->play();
+    ////////////////////////////////////////////////////////////////////////////
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
 void MainWindow::on_pushButton_4_clicked()
 {
-     MainWindow ::close();
+     MainWindow ::close();  // Закрытие программы
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    lestWindow->show();  // Показываем  окно о авторе
+    lestWindow->show();  // Показываем  окно с тестами
     this->close();    // Закрываем основное окно
 }
 
@@ -59,7 +53,6 @@ void MainWindow::on_pushButton_3_clicked()
     sWindow->show();  // Показываем  окно о авторе
     this->close();    // Закрываем основное окно
 }
-
 void MainWindow::on_pushButton_2_clicked()
 {
     thirdWindow->show();  // Показываем  окно о помощье

@@ -2,7 +2,7 @@
 #define RESULTWINDOW_H
 
 #include <QMainWindow>
-
+#include <specialitytest.h>
 namespace Ui {
 class ResultWindow;
 }
@@ -16,8 +16,14 @@ public:
     ~ResultWindow();
 signals:
     void resultWindow();
+private slots:
+    void on_direction_clicked();
+
 private:
     Ui::ResultWindow *ui;
+    SpecialityTest *specialitytest;
+
+
 };
 
 #endif // RESULTWINDOW_H
