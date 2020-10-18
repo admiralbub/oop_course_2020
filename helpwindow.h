@@ -30,6 +30,8 @@ private slots:
 
     void on_telegram_clicked();
 
+    void on_viber_clicked();
+
 private:
     Ui::HelpWindow *ui;
 };

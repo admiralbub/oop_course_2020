@@ -34,14 +34,20 @@ void HelpWindow::on_back_clicked()
 {
     this->close();
     emit firstWindow();
+
 }
 
 
 
 void HelpWindow::on_telegram_clicked()
 {
-    QDesktopServices open;
-    QString link = "http://.....";
-    open.openUrl(QUrl(link));
+    QString link = "http://www.google.com";
+    QDesktopServices::openUrl(QUrl(link));
 
+}
+
+void HelpWindow::on_viber_clicked()
+{
+    QString link = "http://www.google.com";
+    QDesktopServices::openUrl(QUrl(link));
 }
