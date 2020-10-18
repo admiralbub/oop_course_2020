@@ -61,30 +61,171 @@ font-size:16px;</string>
      <string>Допомога щодо використання програми</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_further">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>500</y>
-      <width>121</width>
-      <height>41</height>
+      <x>60</x>
+      <y>100</y>
+      <width>631</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Якщо у вас виникли проблема при роботі з програмою, то ви можете&lt;br&gt; звернутися в службу підтримки.
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pic">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>180</y>
+      <width>141</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>200</y>
+      <width>171</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_further {
+     <string notr="true">font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>admiralbub@ukr.net</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>200</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-  Email служби підримки</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>260</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>+380 (087) 122-22-22</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>270</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>- Телефон  служби підримки</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>290</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>+380 (017) 132-42-52</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>360</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Месенджери для зв'язку з техпідтримкою
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="telegram">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>400</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#telegram {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#pushButton_further:hover {
+#telegram:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
     </property>
     <property name="text">
-     <string>Далі</string>
+     <string>Telegram</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="viber">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>400</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#viber {
+   color:#000;
+   border-radius:5px;
+   background:#FFD200;
+   font-size:14px;
+   cursor:pointer;
+}
+#viber:hover {
+	 background:#fff;
+     cursor:pointer;
+}</string>
+    </property>
+    <property name="text">
+     <string>Viber</string>
     </property>
    </widget>
   </widget>
