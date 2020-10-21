@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SpecialtyWindow</class>
+ <widget class="QMainWindow" name="SpecialtyWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1B5EA6;
+color:#fff;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>791</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:21px;</string>
+    </property>
+    <property name="text">
+     <string>Результат по обраної спеціальності для навчання&lt;br&gt; в НУ Запорізька політехніка</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>571</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>180</y>
+      <width>371</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:14px;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;121 Інженерія програмного забезпечення	&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>230</y>
+      <width>371</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;122 Комп’ютерні науки&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>280</y>
+      <width>371</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;123 Комп'ютерна інженерія&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>371</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;124 Системний аналіз&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="balls_1">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>320</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="balls_2">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>270</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ff0000;&quot;&gt;40%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="balls_3">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>220</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffff00;&quot;&gt;50%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="balls_4">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>170</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:14px;
+font-weight:700;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#00ff00;&quot;&gt;89%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="menu_button">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>550</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#menu_button {
+   color:#000;
+   border-radius:5px;
+   background:#FFD200;
+   font-size:14px;
+   cursor:pointer;
+}
+#menu_button:hover {
+	 background:#fff;
+     cursor:pointer;
+}</string>
+    </property>
+    <property name="text">
+     <string>В меню</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>550</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#exit {
+   color:#000;
+   border-radius:5px;
+   background:#FFD200;
+   font-size:14px;
+   cursor:pointer;
+}
+#exit:hover {
+	 background:#fff;
+     cursor:pointer;
+}</string>
+    </property>
+    <property name="text">
+     <string>Вихід</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>400</y>
+      <width>571</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>460</y>
+      <width>531</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:16px;
+font-weight:600;</string>
+    </property>
+    <property name="text">
+     <string>121 Інженерія програмного забезпечення	</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>430</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:16px;
+font-weight:600;</string>
+    </property>
+    <property name="text">
+     <string>Вибір спеціальності:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>891</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

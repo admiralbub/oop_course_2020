@@ -9,10 +9,18 @@ SpecialityTest::SpecialityTest(QWidget *parent) :
     setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
+    resultspecialy = new SpecialtyWindow();
+    connect(resultspecialy, &SpecialtyWindow::resultspecialy, this, &SpecialityTest::show);
 
 }
 
 SpecialityTest::~SpecialityTest()
 {
     delete ui;
+}
+
+void SpecialityTest::on_answer_1_clicked()
+{
+    resultspecialy->show();  // Показываем  окно о авторе
+    this->close();    // Закрываем основное окно
 }

@@ -25,8 +25,7 @@ HelpWindow::~HelpWindow()
 }
 
 
-void HelpWindow::on_pushButton_further_clicked()
-{
+void HelpWindow::on_pushButton_further_clicked(){
 
 }
 
