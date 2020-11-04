@@ -22,8 +22,8 @@ font-size:16px;</string>
    <widget class="QPushButton" name="back">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>500</y>
+      <x>70</x>
+      <y>490</y>
       <width>121</width>
       <height>41</height>
      </rect>

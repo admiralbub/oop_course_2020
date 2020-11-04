@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
     //Добавляем фоновую музыку для теста
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl("qrc:/resources/sounds/Original Tetris theme (Tetris Soundtrack).mp3"));
+    playlist->addMedia(QUrl("qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();
