@@ -20,13 +20,13 @@ public:
     ~HelpWindow();
 
 private slots:
-    void on_pushButton_clicked();
+   // void on_pushButton_clicked();
 
     void on_pushButton_further_clicked();
 
     void on_back_clicked();
 
-    void on_label_telegram_linkActivated(const QString &link);
+   //void on_label_telegram_linkActivated(const QString &link);
 
     void on_telegram_clicked();
 
