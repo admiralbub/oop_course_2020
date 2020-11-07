@@ -27,7 +27,7 @@ TestWindow::~TestWindow()
 
 void TestWindow::ReadFile()
 {
-    QString file_name = ":/resources/file/database.txt";
+    QString file_name = ":/resources/file/database.txt"  ;
     data.initFileAndOpenForRead(file_name);
     // temporary check open file
     if(data.file.isOpen())
