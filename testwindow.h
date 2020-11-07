@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <resultwindow.h>
+#include <mydata.h>
+
 namespace Ui {
 class TestWindow;
 }
@@ -14,6 +16,8 @@ class TestWindow : public QMainWindow
 public:
     explicit TestWindow(QWidget *parent = nullptr);
     ~TestWindow();
+private:
+    void ReadFile();
 signals:
     void firstWindow();
 private slots:
@@ -31,6 +35,7 @@ private slots:
 private:
     Ui::TestWindow *ui;
     ResultWindow *resultWindow;
+    MyData data;
 };
 
 #endif // TESTWINDOW_H

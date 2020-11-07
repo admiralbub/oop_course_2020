@@ -17,12 +17,27 @@ TestWindow::TestWindow(QWidget *parent) :
     resultWindow = new ResultWindow();
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
-
+    ReadFile();
 }
 
 TestWindow::~TestWindow()
 {
     delete ui;
+}
+
+void TestWindow::ReadFile()
+{
+    QString file_name = "database.txt";
+    data.initFileAndOpenForRead(file_name);
+    // temporary check open file
+    if(data.file.isOpen())
+    {
+        ui->label_6->setText("File is open");
+    }
+    else
+    {
+        ui->label_6->setText("File not open!");
+    }
 }
 
 void TestWindow::on_pushButton_menu_clicked()

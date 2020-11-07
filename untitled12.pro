@@ -19,6 +19,7 @@ SOURCES += \
     helpwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    mydata.cpp \
     resultwindow.cpp \
     specialitytest.cpp \
     specialtywindow.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
     aboutwindow.h \
     helpwindow.h \
     mainwindow.h \
+    mydata.h \
     resultwindow.h \
     specialitytest.h \
     specialtywindow.h \
