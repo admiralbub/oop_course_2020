@@ -121,19 +121,6 @@ font-weight:600;</string>
      <string>Відповіді:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_pic">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>280</y>
-      <width>301</width>
-      <height>241</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="answer_2">
     <property name="geometry">
      <rect>
