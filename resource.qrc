@@ -5,7 +5,7 @@
         <file>sounds/Original Tetris theme (Tetris Soundtrack).mp3</file>
         <file>image/vstup-na-budzhet-2019_1.jpg</file>
         <file>sounds/Paul Mauriat - Love Is Blue.mp3</file>
-        <file>file/database.txt</file>
         <file>database.txt</file>
+        <file>DataBase/questions_directions.csv</file>
     </qresource>
 </RCC>

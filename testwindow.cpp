@@ -1,5 +1,6 @@
 #include "testwindow.h"
 #include "ui_testwindow.h"
+#include <QTextCodec>
 
 TestWindow::TestWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,26 +18,40 @@ TestWindow::TestWindow(QWidget *parent) :
     resultWindow = new ResultWindow();
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
+    data = new MyData(10); // указываем количество вопросов теста
+    QString file_name = ":/resources/DataBase/questions_directions.csv";
+    data->initFileAndOpenForRead(file_name); // открываем нужный нам файл
     ReadFile();
 }
 
 TestWindow::~TestWindow()
 {
+    delete data;
     delete ui;
+}
+
+void TestWindow::Process_Questions_count()
+{
+    if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
+    {
+        resultWindow->show(); // открываем окно с результатами
+        this->close();
+    }
+    data->counter_question++; // порядковый номер вопроса увеличиваем на 1
 }
 
 void TestWindow::ReadFile()
 {
-    QString file_name = ":/resources/file/database.txt"  ;
-    data.initFileAndOpenForRead(file_name);
-    // temporary check open file
-    if(data.file.isOpen())
+    Process_Questions_count();
+    ui->variant1->setText(data->stream.readLine());// считываем и записываем вопросы в строчки
+    ui->variant2->setText(data->stream.readLine());
+    ui->variant3->setText(data->stream.readLine());
+    ui->variant4->setText(data->stream.readLine());
+    if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
-        ui->label_6->setText("File is open");
-    }
-    else
-    {
-        ui->label_6->setText("File not open!");
+        QString convert_int;
+        ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 10");
+        // формируем строку "номер вопроса"
     }
 }
 
@@ -48,22 +63,20 @@ void TestWindow::on_pushButton_menu_clicked()
 
 void TestWindow::on_answer_1_clicked()
 {
-    //Тут пишем код при нажатие на 1 ответ
-    resultWindow->show();
-    this->close();
+    ReadFile();
 }
 
 void TestWindow::on_answer_2_clicked()
 {
-    //Тут пишем код при нажатие на 2 ответ
+    ReadFile();
 }
 
 void TestWindow::on_answer_3_clicked()
 {
-    //Тут пишем код при нажатие на 3 ответ
+    ReadFile();
 }
 
 void TestWindow::on_answer_4_clicked()
 {
-    //Тут пишем код при нажатие на 4 ответ
+    ReadFile();
 }

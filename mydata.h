@@ -8,10 +8,14 @@
 class MyData
 {
 public:
-    QFile file;
     MyData();
+    MyData(int number_questions);
+    QFile file;
+    QTextStream stream;
+    int counter_question;
+    int getNumberAlQuestions();
     void initFileAndOpenForRead(QString name_file);
 private:
-    QTextStream stream;
+    int number_all_questions;
 };
 #endif // MYDATA_H

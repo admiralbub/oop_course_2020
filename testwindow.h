@@ -18,6 +18,7 @@ public:
     ~TestWindow();
 private:
     void ReadFile();
+    void Process_Questions_count();
 signals:
     void firstWindow();
 private slots:
@@ -35,7 +36,7 @@ private slots:
 private:
     Ui::TestWindow *ui;
     ResultWindow *resultWindow;
-    MyData data;
+    MyData *data;
 };
 
 #endif // TESTWINDOW_H

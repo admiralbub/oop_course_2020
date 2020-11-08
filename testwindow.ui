@@ -92,7 +92,7 @@ font-weight:600;</string>
      <rect>
       <x>110</x>
       <y>70</y>
-      <width>121</width>
+      <width>141</width>
       <height>16</height>
      </rect>
     </property>
@@ -212,12 +212,12 @@ font-weight:600;</string>
      <string>4</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="variant1">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>310</y>
-      <width>141</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -229,12 +229,12 @@ font-weight:700;</string>
      <string>Тарас Шевченко</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="variant2">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>370</y>
-      <width>141</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -246,12 +246,12 @@ font-weight:600;</string>
      <string>П.Куліш</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="variant3">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>430</y>
-      <width>141</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -263,12 +263,12 @@ font-weight:600;</string>
      <string>Г.Сковорода</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="variant4">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>490</y>
-      <width>141</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
