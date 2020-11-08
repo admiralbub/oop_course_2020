@@ -45,7 +45,7 @@ void TestWindow::ReadFile()
     ui->variant1->setText(data->stream.readLine());// считываем и записываем вопросы в строчки
     ui->variant2->setText(data->stream.readLine());
     ui->variant3->setText(data->stream.readLine());
-    ui->variant4->setText(data->stream.readLine());
+    //ui->variant4->setText(data->stream.readLine());
     if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
         QString convert_int;
@@ -75,7 +75,4 @@ void TestWindow::on_answer_3_clicked()
     ReadFile();
 }
 
-void TestWindow::on_answer_4_clicked()
-{
-    ReadFile();
-}
+

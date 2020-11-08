@@ -173,32 +173,6 @@ font-weight:600;</string>
      <string>3</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="answer_4">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>480</y>
-      <width>51</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#answer_4 {
-   color:#000;
-   border-radius:5px;
-   background:#FFD200;
-   font-size:14px;
-   cursor:pointer;
-}
-#answer_4:hover {
-	 background:#fff;
-     cursor:pointer;
-}</string>
-    </property>
-    <property name="text">
-     <string>4</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="variant1">
     <property name="geometry">
      <rect>
@@ -248,23 +222,6 @@ font-weight:600;</string>
     </property>
     <property name="text">
      <string>Г.Сковорода</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="variant4">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>490</y>
-      <width>371</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font-weight:600;
-font-size:15px;</string>
-    </property>
-    <property name="text">
-     <string>І.Франко</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_first">
