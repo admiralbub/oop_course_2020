@@ -9,23 +9,19 @@ TestWindow::TestWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
-
     //Тут грузим картинку для теста
-
-
     // Инициализируем третье окно
     resultWindow = new ResultWindow();
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
     data = new MyData(10); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
-    data->initFileAndOpenForRead(file_name); // открываем нужный нам файл
-    ReadFile();
+    data->OpenForRead(file_name); // открываем нужный нам файл
+    Restart_test();
 }
 
 TestWindow::~TestWindow()
 {
-    delete data;
     delete ui;
 }
 
@@ -33,6 +29,7 @@ void TestWindow::Process_Questions_count()
 {
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
+        data->file.close();
         resultWindow->show(); // открываем окно с результатами
         this->close();
     }
@@ -42,10 +39,7 @@ void TestWindow::Process_Questions_count()
 void TestWindow::ReadFile()
 {
     Process_Questions_count();
-    ui->variant1->setText(data->stream.readLine());// считываем и записываем вопросы в строчки
-    ui->variant2->setText(data->stream.readLine());
-    ui->variant3->setText(data->stream.readLine());
-    //ui->variant4->setText(data->stream.readLine());
+    ui->question->setText(data->stream.readLine());// считываем и записываем вопрос в строчку
     if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
         QString convert_int;
@@ -56,6 +50,7 @@ void TestWindow::ReadFile()
 
 void TestWindow::on_pushButton_menu_clicked()
 {
+    Restart_test();
     this->close();
     emit firstWindow();
 }
@@ -75,4 +70,17 @@ void TestWindow::on_answer_3_clicked()
     ReadFile();
 }
 
+void TestWindow::on_pushButton_first_clicked()
+{
+   Restart_test();
+}
 
+void TestWindow::Restart_test()
+{
+    ui->label_score->setText("Питання 1 з 10");
+    data->counter_question = 0;
+    data->stream.seek(0);
+    // Здесь по идеи курсор в файле переносим на начало и должна происходить сортировка
+    // Считываем новый вопрос
+    ReadFile();
+}

@@ -14,8 +14,11 @@ public:
     QTextStream stream;
     int counter_question;
     int getNumberAlQuestions();
-    void initFileAndOpenForRead(QString name_file);
+    void OpenForRead(QString name_file);
+    void OpenForWrite(QString name_file);
+    void CloseFile();
 private:
     int number_all_questions;
+    void InitFile(QString name_file);
 };
 #endif // MYDATA_H

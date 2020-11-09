@@ -187,7 +187,7 @@ font-weight:600;</string>
 font-weight:700;</string>
     </property>
     <property name="text">
-     <string>Тарас Шевченко</string>
+     <string>Так</string>
     </property>
    </widget>
    <widget class="QLabel" name="variant2">
@@ -204,7 +204,7 @@ font-weight:700;</string>
 font-weight:600;</string>
     </property>
     <property name="text">
-     <string>П.Куліш</string>
+     <string>Ні</string>
     </property>
    </widget>
    <widget class="QLabel" name="variant3">
@@ -221,7 +221,7 @@ font-weight:600;</string>
 font-weight:600;</string>
     </property>
     <property name="text">
-     <string>Г.Сковорода</string>
+     <string>Не знаю</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_first">
@@ -259,11 +259,16 @@ font-weight:600;</string>
       <height>91</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Lorem Ipsum - это текст-&amp;quot;рыба&amp;quot;, часто используемый в печати и вэб-дизайне.&lt;br /&gt;Lorem Ipsum является стандартной &amp;quot;рыбой&amp;quot; для текстов на латинице с начала XVI века.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>

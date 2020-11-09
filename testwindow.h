@@ -31,6 +31,10 @@ private slots:
 
     void on_answer_3_clicked();
 
+    void Restart_test();
+
+    void on_pushButton_first_clicked();
+
 private:
     Ui::TestWindow *ui;
     ResultWindow *resultWindow;
