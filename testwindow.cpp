@@ -64,6 +64,7 @@ void TestWindow::on_answer_1_clicked()
         ui->answer_1->setText("Pisun");
     }
     data->Write_Answer_in_file();
+
     ReadFile();
 }
 
