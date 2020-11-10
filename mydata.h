@@ -4,8 +4,18 @@
 #include <QFile>
 #include <QTextStream>
 #include <QString>
+#include <QXmlStreamWriter>
 
-class MyData
+class XML_Data
+{
+public:
+    QXmlStreamWriter xml_stream;
+    QFile file_xml;
+    void Write_Answer_in_file();
+    void Init_xml_file(QString name_file);
+};
+
+class MyData: public XML_Data
 {
 public:
     MyData();
@@ -14,11 +24,12 @@ public:
     QTextStream stream;
     int counter_question;
     int getNumberAlQuestions();
-    void OpenForRead(QString name_file);
-    void OpenForWrite(QString name_file);
+    void OpenForRead(QFile &q, QString name_file);
+    void OpenForWrite(QFile &q, QString name_file);
     void CloseFile();
 private:
     int number_all_questions;
     void InitFile(QString name_file);
 };
+
 #endif // MYDATA_H

@@ -16,7 +16,7 @@ TestWindow::TestWindow(QWidget *parent) :
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
     data = new MyData(10); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
-    data->OpenForRead(file_name); // открываем нужный нам файл
+    data->OpenForRead(data->file,file_name); // открываем нужный нам файл
     Restart_test();
 }
 
@@ -29,7 +29,7 @@ void TestWindow::Process_Questions_count()
 {
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
-        data->file.close();
+        data->CloseFile();
         resultWindow->show(); // открываем окно с результатами
         this->close();
     }
@@ -50,13 +50,20 @@ void TestWindow::ReadFile()
 
 void TestWindow::on_pushButton_menu_clicked()
 {
-    Restart_test();
     this->close();
     emit firstWindow();
 }
 
 void TestWindow::on_answer_1_clicked()
 {
+    // TEST  XML-file
+    QString file_name_xml = "answer_directions.xml";
+    data->Init_xml_file(file_name_xml);
+    if(data->file_xml.isOpen())
+    {
+        ui->answer_1->setText("Pisun");
+    }
+    data->Write_Answer_in_file();
     ReadFile();
 }
 
@@ -84,3 +91,4 @@ void TestWindow::Restart_test()
     // Считываем новый вопрос
     ReadFile();
 }
+
