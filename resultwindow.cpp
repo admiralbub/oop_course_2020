@@ -31,3 +31,8 @@ void ResultWindow::on_direction_clicked()
 
 
 }
+
+void ResultWindow::on_first_clicked()
+{
+    this->close();
+}

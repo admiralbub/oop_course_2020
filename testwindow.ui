@@ -48,7 +48,7 @@ color:#fff;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>300</y>
+      <y>330</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -108,7 +108,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>260</y>
+      <y>290</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -125,7 +125,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>360</y>
+      <y>390</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -151,7 +151,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>420</y>
+      <y>450</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -177,7 +177,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>310</y>
+      <y>340</y>
       <width>371</width>
       <height>16</height>
      </rect>
@@ -194,7 +194,7 @@ font-weight:700;</string>
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>370</y>
+      <y>400</y>
       <width>371</width>
       <height>16</height>
      </rect>
@@ -211,7 +211,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>430</y>
+      <y>460</y>
       <width>371</width>
       <height>16</height>
      </rect>
@@ -254,7 +254,7 @@ font-weight:600;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>150</y>
+      <y>160</y>
       <width>761</width>
       <height>91</height>
      </rect>

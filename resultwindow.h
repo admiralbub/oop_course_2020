@@ -19,6 +19,8 @@ signals:
 private slots:
     void on_direction_clicked();
 
+    void on_first_clicked();
+
 private:
     Ui::ResultWindow *ui;
     SpecialityTest *specialitytest;

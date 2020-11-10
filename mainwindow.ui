@@ -187,6 +187,36 @@ font-weight:500;</string>
      <string>© КНТ-139  НУ Запорізька політехніка</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="button_mus">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>540</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#button_mus {
+   color:#000; 
+   font-weight:400;
+   background:#FFD200;
+   border-radius:10px;
+   font-size:15px;
+   cursor:pointer;
+}
+#button_mus:hover {
+	 background:#fff;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../kisspng-computer-icons-scalable-vector-graphics-encapsulat-large-volume-svg-png-icon-free-download-79732-5c0ce42392b6f8.768976751544348707601.jpg</normaloff>../../kisspng-computer-icons-scalable-vector-graphics-encapsulat-large-volume-svg-png-icon-free-download-79732-5c0ce42392b6f8.768976751544348707601.jpg</iconset>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

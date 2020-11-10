@@ -203,7 +203,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>70</x>
       <y>560</y>
-      <width>171</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -221,7 +221,7 @@ p, li { white-space: pre-wrap; }
 }</string>
     </property>
     <property name="text">
-     <string>Пройти спочатку</string>
+     <string>Вихід</string>
     </property>
    </widget>
    <widget class="QPushButton" name="direction">

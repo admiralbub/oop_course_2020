@@ -7,6 +7,7 @@
 #include <testwindow.h>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
+#include "resultwindow.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -14,10 +15,12 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
+signals:
+    void resultwindow();
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void fon_music(bool vkl);
 
 private slots:
     void on_pushButton_4_clicked();
@@ -27,6 +30,9 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_button_mus_clicked();
+
 
 private:
     Ui::MainWindow *ui;
