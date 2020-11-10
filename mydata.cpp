@@ -9,19 +9,24 @@ void XML_Data::Init_xml_file (QString name_file)
 
 void MyData::Write_Answer_in_file(QString answer)
 {
+     xml_stream.writeCharacters("\n \t");
      xml_stream.writeStartElement("answer");
      xml_stream.writeCharacters(answer);
      xml_stream.writeEndElement();
+     xml_stream.writeCharacters("\n \t");
 }
 
 void MyData::Write_Root_Element()
 {
     xml_stream.writeStartDocument();     // Запускаем запись в документ
-    xml_stream.writeStartElement("Info");   // Записываем первый элемент с его именем
+    xml_stream.writeCharacters("\n");
+    xml_stream.writeStartElement("Info");
+    xml_stream.writeCharacters("\n");
 }
 
 void MyData::Write_End_Root_Element()
 {
+    xml_stream.writeCharacters("\n");
     xml_stream.writeEndElement();        // Закрываем тег
     file_xml.close();
 }
