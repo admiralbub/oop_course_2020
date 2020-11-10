@@ -1,7 +1,7 @@
 #include "testwindow.h"
 #include "ui_testwindow.h"
 #include <QTextCodec>
-
+#include <QDir>
 TestWindow::TestWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TestWindow)
@@ -56,16 +56,13 @@ void TestWindow::on_pushButton_menu_clicked()
 
 void TestWindow::on_answer_1_clicked()
 {
-    // TEST  XML-file
-    // Не работает запись!
-    QString file_name_xml = "answer_directions.xml";
+    QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
     data->Init_xml_file(file_name_xml);
     if(data->file_xml.isOpen())
     {
         ui->answer_1->setText("Pisun");
     }
     data->Write_Answer_in_file();
-
     ReadFile();
 }
 

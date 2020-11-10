@@ -1,5 +1,5 @@
 #include "mydata.h"
-
+#include <QDir>
 void XML_Data::Init_xml_file (QString name_file)
 {
     file_xml.setFileName(name_file);
