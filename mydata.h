@@ -11,7 +11,6 @@ class XML_Data
 public:
     QXmlStreamWriter xml_stream;
     QFile file_xml;
-    void Write_Answer_in_file();
     void Init_xml_file(QString name_file);
 };
 
@@ -26,6 +25,9 @@ public:
     int getNumberAlQuestions();
     void OpenForRead(QFile &q, QString name_file);
     void OpenForWrite(QFile &q, QString name_file);
+    void Write_Answer_in_file(QString answer);
+    void Write_Root_Element();
+    void Write_End_Root_Element();
     void CloseFile();
 private:
     int number_all_questions;

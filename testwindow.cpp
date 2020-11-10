@@ -18,6 +18,9 @@ TestWindow::TestWindow(QWidget *parent) :
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
     Restart_test();
+    QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
+    data->Init_xml_file(file_name_xml);
+    data->Write_Root_Element();
 }
 
 TestWindow::~TestWindow()
@@ -29,7 +32,9 @@ void TestWindow::Process_Questions_count()
 {
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
+        data->Write_End_Root_Element();
         data->CloseFile();
+        // Закрывать xml файл не надо, он закрывается ондновременно с файлом с вопросами! функция data->CloseFile
         resultWindow->show(); // открываем окно с результатами
         this->close();
     }
@@ -56,23 +61,19 @@ void TestWindow::on_pushButton_menu_clicked()
 
 void TestWindow::on_answer_1_clicked()
 {
-    QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
-    data->Init_xml_file(file_name_xml);
-    if(data->file_xml.isOpen())
-    {
-        ui->answer_1->setText("Pisun");
-    }
-    data->Write_Answer_in_file();
+    data->Write_Answer_in_file(ui->variant1->text());
     ReadFile();
 }
 
 void TestWindow::on_answer_2_clicked()
 {
+    data->Write_Answer_in_file(ui->variant2->text());
     ReadFile();
 }
 
 void TestWindow::on_answer_3_clicked()
 {
+    data->Write_Answer_in_file(ui->variant3->text());
     ReadFile();
 }
 

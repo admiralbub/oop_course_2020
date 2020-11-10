@@ -7,14 +7,23 @@ void XML_Data::Init_xml_file (QString name_file)
     file_xml.open(QIODevice::WriteOnly);
 }
 
-void XML_Data::Write_Answer_in_file()
+void MyData::Write_Answer_in_file(QString answer)
+{
+     xml_stream.writeStartElement("answer");
+     xml_stream.writeCharacters(answer);
+     xml_stream.writeEndElement();
+}
+
+void MyData::Write_Root_Element()
 {
     xml_stream.writeStartDocument();     // Запускаем запись в документ
-    xml_stream.writeStartElement("list");   // Записываем первый элемент с его именем
-    xml_stream.writeStartElement("");  // Записываем тег с именем для первого
-    xml_stream.writeAttribute("atribut",("znachenie"));
+    xml_stream.writeStartElement("Info");   // Записываем первый элемент с его именем
+}
+
+void MyData::Write_End_Root_Element()
+{
     xml_stream.writeEndElement();        // Закрываем тег
-    file_xml.close();   // Закрываем файл
+    file_xml.close();
 }
 
 MyData::MyData()
