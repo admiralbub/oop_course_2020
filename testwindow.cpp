@@ -18,9 +18,6 @@ TestWindow::TestWindow(QWidget *parent) :
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
     Restart_test();
-    QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
-    data->Init_xml_file(file_name_xml);
-    data->Write_Root_Element();
 }
 
 TestWindow::~TestWindow()
@@ -84,6 +81,13 @@ void TestWindow::on_pushButton_first_clicked()
 
 void TestWindow::Restart_test()
 {
+    if(data->file_xml.isOpen())
+    {
+    data->file_xml.remove();
+    }
+    QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
+    data->Init_xml_file(file_name_xml);
+    data->Write_Root_Element();
     ui->label_score->setText("Питання 1 з 10");
     data->counter_question = 0;
     data->stream.seek(0);
