@@ -18,6 +18,7 @@ TestWindow::TestWindow(QWidget *parent) :
     data = new MyData(10); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
+    Init_Struct_Dir_name();
     Restart_test();
 }
 
@@ -54,7 +55,6 @@ void TestWindow::Process_Questions_count()
 
 void TestWindow::Count_direct_score_if_answer_true()
 {
-    Init_Struct_Dir_name();
    if(l[1] == "Man-Man")
    {
        MainStruct.Man_Man+=2;
