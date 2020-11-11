@@ -213,8 +213,38 @@ font-weight:500;</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../../kisspng-computer-icons-scalable-vector-graphics-encapsulat-large-volume-svg-png-icon-free-download-79732-5c0ce42392b6f8.768976751544348707601.jpg</normaloff>../../kisspng-computer-icons-scalable-vector-graphics-encapsulat-large-volume-svg-png-icon-free-download-79732-5c0ce42392b6f8.768976751544348707601.jpg</iconset>
+     <iconset resource="resource.qrc">
+      <normaloff>:/resources/image/kisspng.jpg</normaloff>:/resources/image/kisspng.jpg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_mus_2">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>550</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#button_mus {
+   color:#000; 
+   font-weight:400;
+   background:#FFD200;
+   border-radius:10px;
+   font-size:15px;
+   cursor:pointer;
+}
+#button_mus:hover {
+	 background:#fff;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/resources/image/kisspng.jpg</normaloff>:/resources/image/kisspng.jpg</iconset>
     </property>
    </widget>
   </widget>
@@ -230,6 +260,8 @@ font-weight:500;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

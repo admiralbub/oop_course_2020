@@ -7,5 +7,6 @@
         <file>sounds/Paul Mauriat - Love Is Blue.mp3</file>
         <file>database.txt</file>
         <file>DataBase/questions_directions.csv</file>
+        <file>image/kisspng.jpg</file>
     </qresource>
 </RCC>

@@ -20,7 +20,6 @@ signals:
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void fon_music(bool vkl);
 
 private slots:
     void on_pushButton_4_clicked();
@@ -32,6 +31,7 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_button_mus_clicked();
+
 
 
 private:

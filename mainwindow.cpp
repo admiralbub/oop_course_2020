@@ -4,7 +4,7 @@
 #include <QMediaPlayer>
 #include "resultwindow.h"
 #include "QDebug.h"
-
+bool viz;
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
 
@@ -21,30 +21,27 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     lestWindow = new TestWindow();
     connect(lestWindow, &TestWindow::firstWindow, this, &MainWindow::show);
 
+
+
+
     //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
 
 
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl("qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    QMediaPlayer *music = new QMediaPlayer();
+    music->setPlaylist(playlist);
+    music->play();
+
+    connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::stop);
 
 
 }
- //Добавляем фоновую музыку для теста
-void MainWindow::fon_music(bool vkl) {
-    if(vkl==true) {
-        QMediaPlaylist *playlist = new QMediaPlaylist();
-        playlist->addMedia(QUrl("qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3"));
-        playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
-        QMediaPlayer *music = new QMediaPlayer();
-        music->setPlaylist(playlist);
-        music->play();
-        ////////////////////////////////////////////////////////////////////////////
-    }
-    if  (vkl==false) {
-
-    }
-}
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -73,9 +70,8 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_button_mus_clicked()
 {
-
-    bool vkm = true;
-    fon_music(vkm);
     ui->button_mus->setEnabled(false);
 
 }
+
+
