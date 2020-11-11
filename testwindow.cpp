@@ -125,6 +125,7 @@ void TestWindow::on_answer_2_clicked()
 
 void TestWindow::on_answer_3_clicked()
 {
+    Count_direct_score_if_answer_not_determined();
     ReadFile();
 }
 
