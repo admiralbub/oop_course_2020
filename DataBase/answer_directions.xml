@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Info>
 
- 	<result name="Man-Man">3</result>
+ 	<result name="Man-Man">0</result>
  	
  	<result name="Man-Technics">2</result>
  	
- 	<result name="Man-Artistic-image">2</result>
+ 	<result name="Man-Artistic-image">0</result>
  	
- 	<result name="Man-Sign-system">36901728</result>
+ 	<result name="Man-Sign-system">0</result>
  	
 </Info>

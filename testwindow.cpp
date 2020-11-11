@@ -2,6 +2,7 @@
 #include "ui_testwindow.h"
 #include <QTextCodec>
 #include <QDir>
+#include <QDebug>
 TestWindow::TestWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TestWindow)
@@ -53,6 +54,7 @@ void TestWindow::Process_Questions_count()
 
 void TestWindow::Count_direct_score_if_answer_true()
 {
+    Init_Struct_Dir_name();
    if(l[1] == "Man-Man")
    {
        MainStruct.Man_Man+=2;
@@ -69,10 +71,12 @@ void TestWindow::Count_direct_score_if_answer_true()
    {
        MainStruct.Man_Sign_System+=2;
    }
+
 }
 
 void TestWindow::Count_direct_score_if_answer_not_determined()
 {
+        Init_Struct_Dir_name();
     if(l[1] == "Man-Man")
     {
         MainStruct.Man_Man+=1;
