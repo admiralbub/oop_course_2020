@@ -39,6 +39,18 @@ private:
     Ui::TestWindow *ui;
     ResultWindow *resultWindow;
     MyData *data;
+    QStringList l;
+    struct Directions_name
+    {
+        int Man_Man;
+        int Man_Technics;
+        int Man_Artistic_Image;
+        int Man_Sign_System;
+    };
+    Directions_name MainStruct;
+    void Init_Struct_Dir_name();
+    void Count_direct_score_if_answer_true();
+    void Count_direct_score_if_answer_not_determined();
 };
 
 #endif // TESTWINDOW_H

@@ -25,11 +25,6 @@ void ResultWindow::on_direction_clicked()
 
     specialitytest->show();  // Показываем  окно о авторе
     this->close();    // Закрываем основное окно
-
-
-
-
-
 }
 
 void ResultWindow::on_first_clicked()

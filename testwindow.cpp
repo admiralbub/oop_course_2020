@@ -20,6 +20,14 @@ TestWindow::TestWindow(QWidget *parent) :
     Restart_test();
 }
 
+void TestWindow::Init_Struct_Dir_name()
+{
+    MainStruct.Man_Man = 0;
+    MainStruct.Man_Technics = 0;
+    MainStruct.Man_Sign_System = 0;
+    MainStruct.Man_Artistic_Image = 0;
+}
+
 TestWindow::~TestWindow()
 {
     delete ui;
@@ -29,6 +37,11 @@ void TestWindow::Process_Questions_count()
 {
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
+        data->Write_Root_Element();
+        data->Write_Answer_in_file("Man-Man",QString::number(MainStruct.Man_Man));
+        data->Write_Answer_in_file("Man-Technics",QString::number(MainStruct.Man_Technics));
+        data->Write_Answer_in_file("Man-Artistic-image",QString::number(MainStruct.Man_Artistic_Image));
+        data->Write_Answer_in_file("Man-Sign-system",QString::number(MainStruct.Man_Sign_System));
         data->Write_End_Root_Element();
         data->CloseFile();
         // Закрывать xml файл не надо, он закрывается ондновременно с файлом с вопросами! функция data->CloseFile
@@ -38,10 +51,53 @@ void TestWindow::Process_Questions_count()
     data->counter_question++; // порядковый номер вопроса увеличиваем на 1
 }
 
+void TestWindow::Count_direct_score_if_answer_true()
+{
+   if(l[1] == "Man-Man")
+   {
+       MainStruct.Man_Man+=2;
+   }
+   else if(l[1] == "Man-Technics")
+   {
+       MainStruct.Man_Technics+=2;
+   }
+   else if(l[1] == "Man-Artistic-image")
+   {
+       MainStruct.Man_Artistic_Image+=2;
+   }
+   else
+   {
+       MainStruct.Man_Sign_System+=2;
+   }
+}
+
+void TestWindow::Count_direct_score_if_answer_not_determined()
+{
+    if(l[1] == "Man-Man")
+    {
+        MainStruct.Man_Man+=1;
+    }
+    else if(l[1] == "Man-Technics")
+    {
+        MainStruct.Man_Technics+=1;
+    }
+    else if(l[1] == "Man-Artistic-image")
+    {
+        MainStruct.Man_Artistic_Image+=1;
+    }
+    else
+    {
+        MainStruct.Man_Sign_System+=1;
+    }
+}
+
 void TestWindow::ReadFile()
 {
     Process_Questions_count();
-    ui->question->setText(data->stream.readLine());// считываем и записываем вопрос в строчку
+    QString line;
+    line = data->stream.readLine(); // разбиваем считанную строку на список
+    l = line.split(';'); // первый елемент - вопрос, второй - направление
+    ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
     if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
         QString convert_int;
@@ -58,19 +114,17 @@ void TestWindow::on_pushButton_menu_clicked()
 
 void TestWindow::on_answer_1_clicked()
 {
-    data->Write_Answer_in_file(ui->variant1->text());
+    Count_direct_score_if_answer_true();
     ReadFile();
 }
 
 void TestWindow::on_answer_2_clicked()
 {
-    data->Write_Answer_in_file(ui->variant2->text());
     ReadFile();
 }
 
 void TestWindow::on_answer_3_clicked()
 {
-    data->Write_Answer_in_file(ui->variant3->text());
     ReadFile();
 }
 
@@ -86,8 +140,7 @@ void TestWindow::Restart_test()
     data->file_xml.remove();
     }
     QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
-    data->Init_xml_file(file_name_xml);
-    data->Write_Root_Element();
+    data->Init_xml_file_read(file_name_xml);
     ui->label_score->setText("Питання 1 з 10");
     data->counter_question = 0;
     data->stream.seek(0);
