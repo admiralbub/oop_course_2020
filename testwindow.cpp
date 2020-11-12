@@ -76,7 +76,6 @@ void TestWindow::Count_direct_score_if_answer_true()
 
 void TestWindow::Count_direct_score_if_answer_not_determined()
 {
-        Init_Struct_Dir_name();
     if(l[1] == "Man-Man")
     {
         MainStruct.Man_Man+=1;
@@ -142,10 +141,11 @@ void TestWindow::Restart_test()
 {
     if(data->file_xml.isOpen())
     {
+    Init_Struct_Dir_name();
     data->file_xml.remove();
     }
     QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
-    data->Init_xml_file_read(file_name_xml);
+    data->Init_xml_file_write(file_name_xml);
     ui->label_score->setText("Питання 1 з 10");
     data->counter_question = 0;
     data->stream.seek(0);

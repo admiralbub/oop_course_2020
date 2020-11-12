@@ -1,9 +1,22 @@
 #include "mydata.h"
 #include <QDir>
+
 void XML_Data::Init_xml_file_read(QString name_file)
 {
+    Init_xml_file(name_file);
+    xml_stream_read.setDevice(&file_xml);
+    file_xml.open(QIODevice::ReadOnly);
+}
+
+void XML_Data::Init_xml_file(QString name_file)
+{
     file_xml.setFileName(name_file);
+}
+
+void XML_Data::Init_xml_file_write(QString name_file)
+{
     xml_stream.setDevice(&file_xml);
+    Init_xml_file(name_file);
     file_xml.open(QIODevice::WriteOnly);
 }
 

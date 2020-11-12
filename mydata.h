@@ -5,13 +5,18 @@
 #include <QTextStream>
 #include <QString>
 #include <QXmlStreamWriter>
+#include <QXmlStreamReader>
 
 class XML_Data
 {
 public:
     QXmlStreamWriter xml_stream;
+    QXmlStreamReader xml_stream_read;
     QFile file_xml;
+    void Init_xml_file_write(QString name_file);
     void Init_xml_file_read(QString name_file);
+private:
+    void Init_xml_file(QString name_file);
 };
 
 class MyData: public XML_Data

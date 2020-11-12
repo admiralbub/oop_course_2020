@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <specialitytest.h>
+#include "mydata.h"
 namespace Ui {
 class ResultWindow;
 }
@@ -24,8 +25,19 @@ private slots:
 private:
     Ui::ResultWindow *ui;
     SpecialityTest *specialitytest;
-
-
+    XML_Data xml_data;
+    struct result
+    {
+        int all_balls;
+        int first;
+        int second;
+        int third;
+        int fourth;
+    };
+    result Result;
+ private:
+    void SetResults();
+    void InitStructResult();
 };
 
 #endif // RESULTWINDOW_H
