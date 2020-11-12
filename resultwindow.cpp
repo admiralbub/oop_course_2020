@@ -12,6 +12,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
      //Переходим к тесту для выбора специальности
     specialitytest = new SpecialityTest();
     connect(specialitytest, &SpecialityTest::resultwindow, this, &ResultWindow::show);
+    SetResults();
 }
 
 ResultWindow::~ResultWindow()
@@ -37,13 +38,30 @@ void ResultWindow::InitStructResult()
 
 }
 
+bool ResultWindow::Check_Start_Elements()
+{
+     if(xml_data.xml_stream_read.readNext() == QXmlStreamReader::StartElement && xml_data.xml_stream_read.name() == "result")
+         return true;
+}
+
 void ResultWindow::SetResults()
 {
-   // xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
-        //if(xml_data.xml_stream_read.readNext() == QXmlStreamReader::StartElement
-        //        && xml_data.xml_stream_read.name() == "result")
-       // {
-       //     ui->balls_1->setText(xml_data.xml_stream_read.readElementText());;
-        //}
-   // }
+    xml_data.Init_xml_file_read("results.xml");
+    if(Check_Start_Elements())
+    {
+        ui->balls_1->setText(xml_data.xml_stream_read.readElementText());
+    }
+    if(Check_Start_Elements())
+    {
+        ui->balls_2->setText(xml_data.xml_stream_read.readElementText());
+    }
+    if(Check_Start_Elements())
+    {
+        ui->balls_3->setText(xml_data.xml_stream_read.readElementText());
+    }
+    if(Check_Start_Elements())
+    {
+        ui->balls_4->setText(xml_data.xml_stream_read.readElementText());
+    }
+
 }

@@ -38,6 +38,7 @@ private:
  private:
     void SetResults();
     void InitStructResult();
+    bool Check_Start_Elements();
 };
 
 #endif // RESULTWINDOW_H
