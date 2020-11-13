@@ -1,5 +1,4 @@
 #include "mydata.h"
-#include <QDir>
 
 void XML_Data::Init_xml_file_read(QString name_file)
 {

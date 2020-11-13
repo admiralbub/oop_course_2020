@@ -8,6 +8,5 @@
         <file>database.txt</file>
         <file>DataBase/questions_directions.csv</file>
         <file>image/kisspng.jpg</file>
-        <file>DataBase/results.xml</file>
     </qresource>
 </RCC>

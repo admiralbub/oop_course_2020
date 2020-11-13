@@ -33,6 +33,7 @@ void TestWindow::Init_Struct_Dir_name()
 TestWindow::~TestWindow()
 {
     delete ui;
+    delete data;
 }
 
 void TestWindow::Process_Questions_count()
@@ -46,7 +47,6 @@ void TestWindow::Process_Questions_count()
         data->Write_Answer_in_file("Man-Sign-system",QString::number(MainStruct.Man_Sign_System));
         data->Write_End_Root_Element();
         data->CloseFile();
-        data->file_xml.rename("../oop_course_2020/DataBase/results.xml");
         // Закрывать xml файл не надо, он закрывается ондновременно с файлом с вопросами! функция data->CloseFile
         resultWindow->show(); // открываем окно с результатами
         this->close();

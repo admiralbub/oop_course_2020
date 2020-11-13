@@ -1,6 +1,6 @@
 #include "resultwindow.h"
 #include "ui_resultwindow.h"
-
+#include <QDir>
 ResultWindow::ResultWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResultWindow)
@@ -40,12 +40,9 @@ void ResultWindow::InitStructResult()
 
 void ResultWindow::SetResults()
 {
-    xml_data.Init_xml_file_read("results.xml");
-    if(xml_data.xml_stream_read.readNext() == QXmlStreamReader::StartElement && xml_data.xml_stream_read.name() == "Info")
+    xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
+    if(xml_data.file_xml.isOpen())
     {
-        if(xml_data.xml_stream_read.readNext() == QXmlStreamReader::StartElement && xml_data.xml_stream_read.name() == "result")
-        ui->balls_1->setText(xml_data.xml_stream_read.readElementText());
+        ui->balls_1->setText("Open");
     }
-    xml_data.file_xml.close();
-    xml_data.file_xml.remove("answer_directions.xml");
 }
