@@ -15,6 +15,7 @@ TestWindow::TestWindow(QWidget *parent) :
     resultWindow = new ResultWindow();
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
+    connect(this,&TestWindow::close, resultWindow, &ResultWindow::SetResults);
     data = new MyData(10); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
@@ -49,6 +50,7 @@ void TestWindow::Process_Questions_count()
         data->CloseFile();
         // Закрывать xml файл не надо, он закрывается ондновременно с файлом с вопросами! функция data->CloseFile
         resultWindow->show(); // открываем окно с результатами
+        resultWindow->SetResults();
         this->close();
     }
     data->counter_question++; // порядковый номер вопроса увеличиваем на 1
