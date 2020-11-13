@@ -22,12 +22,12 @@ void XML_Data::Init_xml_file_write(QString name_file)
 
 void MyData::Write_Answer_in_file(QString name, QString result)
 {
-     xml_stream.writeCharacters("\n \t");
+     xml_stream.writeCharacters("\t");
      xml_stream.writeStartElement("result");
      xml_stream.writeAttribute("name", name);
      xml_stream.writeCharacters(result);
      xml_stream.writeEndElement();
-     xml_stream.writeCharacters("\n \t");
+     xml_stream.writeCharacters("\n");
 }
 
 void MyData::Write_Root_Element()
@@ -40,7 +40,6 @@ void MyData::Write_Root_Element()
 
 void MyData::Write_End_Root_Element()
 {
-    xml_stream.writeCharacters("\n");
     xml_stream.writeEndElement();        // Закрываем тег
     file_xml.close();
 }

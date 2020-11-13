@@ -99,7 +99,10 @@ void TestWindow::ReadFile()
 {
     Process_Questions_count();
     QString line;
-    line = data->stream.readLine(); // разбиваем считанную строку на список
+    if(data->file.isOpen())
+    {
+        line = data->stream.readLine(); // разбиваем считанную строку на список
+    }
     l = line.split(';'); // первый елемент - вопрос, второй - направление
     ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
     if(data->counter_question >= 2) // если номер вопроса больше или равен
