@@ -12,6 +12,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
      //Переходим к тесту для выбора специальности
     specialitytest = new SpecialityTest();
     connect(specialitytest, &SpecialityTest::resultwindow, this, &ResultWindow::show);
+    // commit
 }
 
 ResultWindow::~ResultWindow()
