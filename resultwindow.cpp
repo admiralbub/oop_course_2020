@@ -41,8 +41,11 @@ void ResultWindow::InitStructResult()
 void ResultWindow::SetResults()
 {
     xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
-    if(xml_data.file_xml.isOpen())
-    {
-        ui->balls_1->setText("Open");
+        if(xml_data.file_xml.isOpen())
+        {
+         while(!xml_data.file_xml.atEnd())
+         {
+           ui->balls_1->setText(xml_data.Parse_xml_element());
+         }
     }
 }
