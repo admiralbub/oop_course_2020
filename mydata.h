@@ -15,7 +15,6 @@ public:
     QFile file_xml;
     void Init_xml_file_write(QString name_file);
     void Init_xml_file_read(QString name_file);
-    QString Parse_xml_element();
 private:
     void Init_xml_file(QString name_file);
 };

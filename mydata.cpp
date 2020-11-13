@@ -19,17 +19,6 @@ void XML_Data::Init_xml_file_write(QString name_file)
     file_xml.open(QIODevice::WriteOnly);
 }
 
-QString XML_Data::Parse_xml_element()
-{
-    xml_stream_read.isStartElement();
-    QString line = xml_stream_read.readElementText();
-    if(xml_stream_read.name() == "result")
-        {
-            return line;
-        }
-    return line;
-}
-
 void MyData::Write_Answer_in_file(QString name, QString result)
 {
      xml_stream.writeCharacters("\t");

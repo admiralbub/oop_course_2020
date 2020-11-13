@@ -35,9 +35,10 @@ private:
         int fourth;
     };
     result Result;
- private:
-    void SetResults();
+private:
     void InitStructResult();
+public:
+    void SetResults();
 };
 
 #endif // RESULTWINDOW_H
