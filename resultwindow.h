@@ -45,8 +45,11 @@ private:
     void SetColorPercent(QLabel *l, double value);
     void SetIntValue();
     void RemarkSet();
+    void AddNameDirection_for_parse(QString name);
 public:
+    QStringList Direction_name;
     void SetResults();
+    QStringList ReturnNameDirection_for_parse();
 };
 
 #endif // RESULTWINDOW_H

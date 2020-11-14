@@ -2,6 +2,7 @@
 #include "ui_resultwindow.h"
 #include <QDir>
 #include <cmath>
+#include "specialtywindow.h"
 ResultWindow::ResultWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResultWindow)
@@ -11,7 +12,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
      //Переходим к тесту для выбора специальности
-    specialitytest = new SpecialtyWindow();
+    specialitytest = new SpecialtyWindow();  
     connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
     // commit
 }
@@ -25,7 +26,7 @@ void ResultWindow::on_direction_clicked()
 {
     //Переходим к тесту для выбора специальности по напрвлениею человека
 
-    specialitytest->show();  // Показываем  окно о авторе
+    specialitytest->close();  // Показываем  окно о авторе
     this->close();    // Закрываем основное окно
 }
 
@@ -52,6 +53,11 @@ double ResultWindow::MaxElementResult()
     return max;
 }
 
+QStringList ResultWindow::ReturnNameDirection_for_parse()
+{
+   return Direction_name;
+}
+
 void ResultWindow::RemarkSet()
 {
     double newmax = MaxElementResult();
@@ -62,22 +68,26 @@ void ResultWindow::RemarkSet()
     {
         line += "Людина - людина\n";
         count++;
+        AddNameDirection_for_parse("Man-Man");
     }
     if(newmax == Result.second)
     {
         line += "Людина-техніка\n";
         count++;
+        AddNameDirection_for_parse("Man-Technics");
     }
     if(newmax == Result.third)
     {
         line += "Людина - мистецтво\n";
         count++;
+        AddNameDirection_for_parse("Man-Artistic-image");
     }
 
     if(newmax == Result.fourth)
     {
         line += "Людина - знакова система\n";
         count++;
+        AddNameDirection_for_parse("Man-Sign-system");
     }
     if(count >= 2)
     {

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <resultwindow.h>
 #include <mydata.h>
-#include <resultwindow.h>
+
 namespace Ui {
 class TestWindow;
 }

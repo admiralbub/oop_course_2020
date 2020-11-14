@@ -1,7 +1,8 @@
 #ifndef SPECIALTYWINDOW_H
 #define SPECIALTYWINDOW_H
-
+#include "mydata.h"
 #include <QMainWindow>
+#include <resultwindow.h>
 namespace Ui {
 class SpecialtyWindow;
 }
@@ -22,6 +23,10 @@ private slots:
 
 private:
     Ui::SpecialtyWindow *ui;
+    XML_Data *myData;
+    ResultWindow *resultwindoW;
+public:
+    void WriteSpecialityinTextBrowser();
 };
 
 #endif // SPECIALTYWINDOW_H
