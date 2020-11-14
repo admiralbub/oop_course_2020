@@ -93,7 +93,7 @@ void ResultWindow::SetColorPercent(QLabel *l, double value)
     }
     else
     {
-        l->setStyleSheet("font-size:22px;font-weight:700;color:#FF2800;");
+        l->setStyleSheet("font-size:22px;font-weight:700;color:#FFA500;");
     }
 }
 
