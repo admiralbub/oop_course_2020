@@ -1,6 +1,7 @@
 #include "resultwindow.h"
 #include "ui_resultwindow.h"
 #include <QDir>
+#include <cmath>
 ResultWindow::ResultWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResultWindow)
@@ -81,17 +82,18 @@ void ResultWindow::SetIntValue()
 
 void ResultWindow::SetColorPercent(QLabel *l, double value)
 {
-    if(0.0 <= value <= 35.0)
+    int Test = (int)value;
+    if(Test >= 45)
     {
-        l->setStyleSheet("color:red");
+        l->setStyleSheet("font-size:22px;font-weight:700;color:#55ff00;");
     }
-    if(35.0 < value <= 45.0)
+    else if(Test >= 35)
     {
-        l->setStyleSheet("color:yellow");
+        l->setStyleSheet("font-size:22px;font-weight:700;color:#ffff00;");
     }
-    if(45.0 < value < 100.0)
+    else
     {
-        l->setStyleSheet("color:green");
+        l->setStyleSheet("font-size:22px;font-weight:700;color:#FF2800;");
     }
 }
 
