@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <specialitytest.h>
 #include "mydata.h"
+#include <QLabel>
 namespace Ui {
 class ResultWindow;
 }
@@ -28,17 +29,18 @@ private:
     XML_Data xml_data;
     struct result
     {
-        int all_balls;
-        int first;
-        int second;
-        int third;
-        int fourth;
+        double all_balls;
+        double first;
+        double second;
+        double third;
+        double fourth;
     };
     result Result;
 private:
     void InitStructResult();
     void Count_Percent();
     void SetIntValue();
+    void SetColorPercent(QLabel *l, double value);
 public:
     void SetResults();
 };

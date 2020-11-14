@@ -41,12 +41,25 @@ void ResultWindow::InitStructResult()
 void ResultWindow::Count_Percent()
 {
     Result.all_balls = Result.first + Result.second + Result.third+Result.fourth;
-    int Temp = 100; // проценты
+    double Temp = 100.0; // проценты
     Temp /= Result.all_balls;
     Result.first *= Temp;
     Result.second *= Temp;
     Result.third *= Temp;
     Result.fourth *= Temp;
+    Result.first = round(Result.first);
+    Result.second = round(Result.second);
+    Result.third = round(Result.third);
+    Result.fourth = round(Result.fourth);
+    while(Result.first + Result.second + Result.third+Result.fourth > 100)
+    {
+        Result.fourth--;
+    }
+    while(Result.first + Result.second + Result.third+Result.fourth < 100)
+    {
+        Result.third++;
+    }
+
 }
 
 void ResultWindow::SetIntValue()
@@ -55,6 +68,26 @@ void ResultWindow::SetIntValue()
     ui->balls_2->setText(QString::number(Result.second) + " %");
     ui->balls_3->setText(QString::number(Result.third) + " %");
     ui->balls_4->setText(QString::number(Result.fourth)+ " %");
+    SetColorPercent(ui->balls_1, Result.first);
+    SetColorPercent(ui->balls_2, Result.second);
+    SetColorPercent(ui->balls_3, Result.third);
+    SetColorPercent(ui->balls_4, Result.fourth);
+}
+
+void ResultWindow::SetColorPercent(QLabel *l, double value)
+{
+    if(0.0 <= value <= 35.0)
+    {
+        l->setStyleSheet("color:red");
+    }
+    if(35.0 < value <= 45.0)
+    {
+        l->setStyleSheet("color:yellow");
+    }
+    if(45.0 < value < 100.0)
+    {
+        l->setStyleSheet("color:green");
+    }
 }
 
 void ResultWindow::SetResults()
@@ -71,19 +104,19 @@ void ResultWindow::SetResults()
                     QString attribute_value = attr.value().toString();
                     if(attr.value().toString() == "Man-Man")
                     {
-                        Result.first = xml_data.xml_stream_read.readElementText().toInt() + 1;
+                        Result.first = xml_data.xml_stream_read.readElementText().toDouble();
                     }
                     else if(attr.value().toString() == "Man-Technics")
                     {
-                        Result.second = xml_data.xml_stream_read.readElementText().toInt() + 1;
+                        Result.second = xml_data.xml_stream_read.readElementText().toDouble();
                     }
                     else if(attr.value().toString() == "Man-Artistic-image")
                     {
-                        Result.third = xml_data.xml_stream_read.readElementText().toInt() + 1;
+                        Result.third = xml_data.xml_stream_read.readElementText().toDouble();
                     }
                     else
                     {
-                        Result.fourth = xml_data.xml_stream_read.readElementText().toInt() + 1;
+                        Result.fourth = xml_data.xml_stream_read.readElementText().toDouble();
                     }
                 }
 
