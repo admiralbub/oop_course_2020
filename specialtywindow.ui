@@ -70,14 +70,14 @@ color:#fff;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#exit {
+     <string notr="true">#site_nuzp {
    color:#000;
    border-radius:5px;
    background:#FFD200;
    font-size:14px;
    cursor:pointer;
 }
-#exit:hover {
+#site_nuzp:hover {
 	 background:#fff;
      cursor:pointer;
 }</string>
