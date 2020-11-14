@@ -38,11 +38,28 @@ void ResultWindow::InitStructResult()
 
 }
 
+void ResultWindow::Count_Percent()
+{
+    Result.all_balls = Result.first + Result.second + Result.third+Result.fourth;
+    int Temp = 100; // проценты
+    Temp /= Result.all_balls;
+    Result.first *= Temp;
+    Result.second *= Temp;
+    Result.third *= Temp;
+    Result.fourth *= Temp;
+}
+
+void ResultWindow::SetIntValue()
+{
+    ui->balls_1->setText(QString::number(Result.first) + " %");
+    ui->balls_2->setText(QString::number(Result.second) + " %");
+    ui->balls_3->setText(QString::number(Result.third) + " %");
+    ui->balls_4->setText(QString::number(Result.fourth)+ " %");
+}
+
 void ResultWindow::SetResults()
 {
     xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
-    if(xml_data.file_xml.isOpen())
-    {
         while(xml_data.xml_stream_read.readNextStartElement())
         {
            if(xml_data.xml_stream_read.name() == "result")
@@ -54,25 +71,27 @@ void ResultWindow::SetResults()
                     QString attribute_value = attr.value().toString();
                     if(attr.value().toString() == "Man-Man")
                     {
-                        ui->balls_1->setText(xml_data.xml_stream_read.readElementText());
+                        Result.first = xml_data.xml_stream_read.readElementText().toInt() + 1;
                     }
                     else if(attr.value().toString() == "Man-Technics")
                     {
-                        ui->balls_2->setText(xml_data.xml_stream_read.readElementText());
+                        Result.second = xml_data.xml_stream_read.readElementText().toInt() + 1;
                     }
                     else if(attr.value().toString() == "Man-Artistic-image")
                     {
-                        ui->balls_3->setText(xml_data.xml_stream_read.readElementText());
+                        Result.third = xml_data.xml_stream_read.readElementText().toInt() + 1;
                     }
                     else
                     {
-                        ui->balls_4->setText(xml_data.xml_stream_read.readElementText());
+                        Result.fourth = xml_data.xml_stream_read.readElementText().toInt() + 1;
                     }
                 }
 
              }
 
-           }
-        }
+         }
     }
+    xml_data.file_xml.close();
+    Count_Percent();
+    SetIntValue();
 }

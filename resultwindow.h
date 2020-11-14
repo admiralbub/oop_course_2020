@@ -37,6 +37,8 @@ private:
     result Result;
 private:
     void InitStructResult();
+    void Count_Percent();
+    void SetIntValue();
 public:
     void SetResults();
 };
