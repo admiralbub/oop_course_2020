@@ -16,7 +16,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 signals:
-    void resultwindow();
+    void mainwindow();
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
