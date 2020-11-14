@@ -38,6 +38,11 @@ void ResultWindow::InitStructResult()
 
 }
 
+double rounD(double r)
+{
+    return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
+}
+
 void ResultWindow::Count_Percent()
 {
     Result.all_balls = Result.first + Result.second + Result.third+Result.fourth;
@@ -47,10 +52,10 @@ void ResultWindow::Count_Percent()
     Result.second *= Temp;
     Result.third *= Temp;
     Result.fourth *= Temp;
-    Result.first = round(Result.first);
-    Result.second = round(Result.second);
-    Result.third = round(Result.third);
-    Result.fourth = round(Result.fourth);
+    Result.first = rounD(Result.first);
+    Result.second = rounD(Result.second);
+    Result.third = rounD(Result.third);
+    Result.fourth = rounD(Result.fourth);
     while(Result.first + Result.second + Result.third+Result.fourth > 100)
     {
         Result.fourth--;
