@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>872</width>
-    <height>634</height>
+    <width>877</width>
+    <height>641</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -217,17 +217,17 @@ font-weight:500;</string>
       <normaloff>:/resources/image/kisspng.jpg</normaloff>:/resources/image/kisspng.jpg</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_mus_2">
+   <widget class="QPushButton" name="button_nomus">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>550</y>
+      <x>790</x>
+      <y>540</y>
       <width>51</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#button_mus {
+     <string notr="true">#button_nomus {
    color:#000; 
    font-weight:400;
    background:#FFD200;
@@ -235,7 +235,7 @@ font-weight:500;</string>
    font-size:15px;
    cursor:pointer;
 }
-#button_mus:hover {
+#button_nomus:hover {
 	 background:#fff;
 }</string>
     </property>
@@ -253,7 +253,7 @@ font-weight:500;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>872</width>
+     <width>877</width>
      <height>21</height>
     </rect>
    </property>

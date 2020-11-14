@@ -34,6 +34,8 @@ private slots:
 
 
 
+    void on_button_nomus_clicked();
+
 private:
     Ui::MainWindow *ui;
     AboutWindow *sWindow;

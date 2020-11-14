@@ -38,7 +38,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     music->play();
 
     connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::stop);
+    connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);
 
+     ui->button_nomus->setVisible(false);
 
 }
 
@@ -70,8 +72,15 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_button_mus_clicked()
 {
-    ui->button_mus->setEnabled(false);
+    ui->button_mus->setVisible(false);
+    ui->button_nomus->setVisible(true);
 
 }
 
 
+
+void MainWindow::on_button_nomus_clicked()
+{
+    ui->button_nomus->setVisible(false);
+    ui->button_mus->setVisible(true);
+}

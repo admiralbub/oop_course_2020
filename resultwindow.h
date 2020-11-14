@@ -5,6 +5,7 @@
 #include <specialitytest.h>
 #include "mydata.h"
 #include <QLabel>
+#include <cmath>
 namespace Ui {
 class ResultWindow;
 }
