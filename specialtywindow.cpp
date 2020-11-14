@@ -11,8 +11,7 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     setWindowTitle("Результат по обраному напрямку для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
-    //mi = new MainWindow();
-   // connect(mi, &mi::mainwindow, this, &MainWindow::show);
+
 
 }
 

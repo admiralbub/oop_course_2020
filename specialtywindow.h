@@ -2,7 +2,6 @@
 #define SPECIALTYWINDOW_H
 
 #include <QMainWindow>
-#include <mainwindow.h>
 namespace Ui {
 class SpecialtyWindow;
 }
@@ -23,7 +22,6 @@ private slots:
 
 private:
     Ui::SpecialtyWindow *ui;
-    MainWindow *mi;
 };
 
 #endif // SPECIALTYWINDOW_H
