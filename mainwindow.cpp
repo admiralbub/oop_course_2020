@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     music->setPlaylist(playlist);
     music->play();
 
-    connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::stop);
+    connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::pause);
     connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);
 
      ui->button_nomus->setVisible(false);
