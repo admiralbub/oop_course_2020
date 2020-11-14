@@ -34,10 +34,58 @@ void ResultWindow::on_first_clicked()
     this->close();
 }
 
-double ResultWindow::MaxElementResult(double max)
+double ResultWindow::MaxElementResult()
 {
-
+    double max = Result.first;
+    if(Result.second > max)
+    {
+        max = Result.second;
+    }
+    if(Result.third > max)
+    {
+        max = Result.third;
+    }
+    if(Result.fourth > max)
+    {
+        max = Result.fourth;
+    }
     return max;
+}
+
+void ResultWindow::RemarkSet()
+{
+    double newmax = MaxElementResult();
+    int count = 0;
+    QString line;
+    Remark = "Напрямок, що найкраще підходить :\n";
+    if(newmax == Result.first)
+    {
+        line += "Людина - людина\n";
+        count++;
+    }
+    if(newmax == Result.second)
+    {
+        line += "Людина-техніка\n";
+        count++;
+    }
+    if(newmax == Result.third)
+    {
+        line += "Людина - мистецтво\n";
+        count++;
+    }
+
+    if(newmax == Result.fourth)
+    {
+        line += "Людина - знакова система\n";
+        count++;
+    }
+    if(count >= 2)
+    {
+        Remark = "Напрямки, що найкраще підходять :\n";
+    }
+    Remark += line;
+    ui->system_info->setText(Remark);
+    ui->system_info->setStyleSheet("font-size:18px");
 }
 
 double rounD(double r)
@@ -135,4 +183,5 @@ void ResultWindow::SetResults()
     xml_data.file_xml.close();
     Count_Percent();
     SetIntValue();
+    RemarkSet();
 }

@@ -36,13 +36,15 @@ private:
         double third;
         double fourth;
     };
+    QString Remark;
     result Result;
 private:
     void InitStructResult();
     void Count_Percent();
-    double MaxElementResult(double max);
+    double MaxElementResult();
     void SetColorPercent(QLabel *l, double value);
     void SetIntValue();
+    void RemarkSet();
 public:
     void SetResults();
 };
