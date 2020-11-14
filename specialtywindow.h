@@ -16,7 +16,7 @@ public:
     ~SpecialtyWindow();
 
 private slots:
-    void on_exit_clicked();
+    void on_site_nuzp_clicked();
 
     void on_menu_button_clicked();
 

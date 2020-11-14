@@ -60,7 +60,7 @@ color:#fff;</string>
      <string>В меню</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="exit">
+   <widget class="QPushButton" name="site_nuzp">
     <property name="geometry">
      <rect>
       <x>610</x>

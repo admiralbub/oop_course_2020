@@ -12,7 +12,6 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
 
-
 }
 
 SpecialtyWindow::~SpecialtyWindow()
@@ -20,7 +19,7 @@ SpecialtyWindow::~SpecialtyWindow()
     delete ui;
 }
 
-void SpecialtyWindow::on_exit_clicked()
+void SpecialtyWindow::on_site_nuzp_clicked()
 {
     QString link = "https://pk.zp.edu.ua/fakultety-ta-napryamy-pidhotovky";
     QDesktopServices::openUrl(QUrl(link));
@@ -28,5 +27,8 @@ void SpecialtyWindow::on_exit_clicked()
 
 void SpecialtyWindow::on_menu_button_clicked()
 {
-
+    this->close();
+    auto win = new MainWindow();
+    win->setAttribute( Qt::WA_DeleteOnClose );
+    win->show();
 }

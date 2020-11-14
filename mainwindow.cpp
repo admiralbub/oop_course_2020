@@ -8,6 +8,8 @@ bool viz;
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
 
+    setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
+    setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     // Инициализируем  окно о авторе
     sWindow = new AboutWindow();
@@ -41,6 +43,8 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);
 
      ui->button_nomus->setVisible(false);
+
+
 
 }
 
