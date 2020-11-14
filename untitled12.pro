@@ -22,7 +22,6 @@ SOURCES += \
     mydata.cpp \
     myexception.cpp \
     resultwindow.cpp \
-    specialitytest.cpp \
     specialtywindow.cpp \
     testwindow.cpp
 
@@ -33,7 +32,6 @@ HEADERS += \
     mydata.h \
     myexception.h \
     resultwindow.h \
-    specialitytest.h \
     specialtywindow.h \
     testwindow.h
 
@@ -42,7 +40,6 @@ FORMS += \
     helpwindow.ui \
     mainwindow.ui \
     resultwindow.ui \
-    specialitytest.ui \
     specialtywindow.ui \
     testwindow.ui
 

@@ -2,7 +2,7 @@
 #define RESULTWINDOW_H
 
 #include <QMainWindow>
-#include <specialitytest.h>
+#include <specialtywindow.h>
 #include "mydata.h"
 #include <QLabel>
 #include <cmath>
@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::ResultWindow *ui;
-    SpecialityTest *specialitytest;
+    SpecialtyWindow *specialitytest;
     XML_Data xml_data;
     struct result
     {

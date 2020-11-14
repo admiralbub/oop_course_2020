@@ -6,6 +6,9 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     ui(new Ui::SpecialtyWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("Результат по обраному напрямку для навчання в НУ Запорізька політехніка!");
+    setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+
 }
 
 SpecialtyWindow::~SpecialtyWindow()

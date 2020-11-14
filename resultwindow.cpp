@@ -11,8 +11,8 @@ ResultWindow::ResultWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
      //Переходим к тесту для выбора специальности
-    specialitytest = new SpecialityTest();
-    connect(specialitytest, &SpecialityTest::resultwindow, this, &ResultWindow::show);
+    specialitytest = new SpecialtyWindow();
+    connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
     // commit
 }
 
