@@ -40,8 +40,9 @@ private:
 private:
     void InitStructResult();
     void Count_Percent();
-    void SetIntValue();
+    double MaxElementResult(double max);
     void SetColorPercent(QLabel *l, double value);
+    void SetIntValue();
 public:
     void SetResults();
 };

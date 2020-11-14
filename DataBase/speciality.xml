@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+<direction name = "Man-Man">
+	<speciality>052 Політологія </speciality>
+	<speciality>081 Право</speciality>
+	<speciality>262 Правоохоронна діяльність</speciality>
+	<speciality>053 Психологія</speciality>
+	<speciality>054 Соціологія</speciality>
+	<speciality>061 Журналістика</speciality>
+	<speciality>231 Соціальна робота</speciality>
+	<speciality>241 Готельно-ресторанна справа </speciality>
+	<speciality>242 Туризм </speciality>
+	<speciality>052 Політологія </speciality>
+	<speciality>262 Правоохоронна діяльність </speciality>
+	<speciality>016 Спеціальна освіта </speciality>
+	<speciality>017 Фізична культура і спорт </speciality>
+	<speciality>227 Фізична терапія, ерготерапія </speciality>
+	<speciality>035.04 Філологія (германські мови та літератури (переклад включно))</speciality>
+	<speciality>292 Міжнародні економічні відносини </speciality>
+</direction>
+<direction name = "Man-Technics">
+	<speciality>141 Електроенергетика, електротехніка та електромеханіка</speciality>
+	<speciality>144 Теплоенергетика </speciality>
+	<speciality>151 Автоматизація та комп’ютерно-інтегровані технології</speciality>
+	<speciality>173 Авіоніка </speciality>
+	<speciality>131 Прикладна механіка </speciality>
+	<speciality>133 Галузеве машинобудування</speciality>
+	<speciality>134 Авіаційна та ракетно-космічна техніка </speciality>
+	<speciality>132 Матеріалознавство </speciality>
+	<speciality>136 Металургія </speciality>
+	<speciality>131 Прикладна механіка </speciality>
+	<speciality>275.02 Транспортні технології </speciality>
+	<speciality>132 Матеріалознавство </speciality>
+</direction>
+<direction name = "Man-Technics">
+	<speciality>022 Дизайн</speciality>
+	<speciality>191 Архітектура та містобудування </speciality>
+	<speciality>192 Будівництво та цивільна інженерія </speciality>
+	<speciality>073 Менеджмент</speciality>
+</direction>
+<direction name = "Man-Sign-system">
+	<speciality>121 Інженерія програмного забезпечення</speciality>
+	<speciality>122 Комп’ютерні науки </speciality>
+	<speciality>123 Комп’ютерна інженерія </speciality>
+	<speciality>124 Системний аналіз</speciality>
+	<speciality>125 Кібербезпека</speciality>
+	<speciality>151 Автоматизація та комп’ютерно-інтегровані технології</speciality>
+	<speciality>152 Метрологія та інформаційно-вимірювальна техніка</speciality>
+	<speciality>153 Мікро- та наносистемна техніка </speciality>
+	<speciality>172 Телекомунікації та радіотехніка </speciality>
+	<speciality>051 Економіка</speciality>
+	<speciality>071 Облік і оподаткування облік і аудит</speciality>
+	<speciality>072 Фінанси, банківська справа та страхування фінанси і кредит</speciality>
+	<speciality>073 Менеджмент менеджмент організацій і адміністрування</speciality>
+	<speciality>075 Маркетинг маркетинг</speciality>
+	<speciality>076 Підприємництво, торгівля та біржова діяльність організація торгівлі та комерційна логістика</speciality>
+	<speciality>281 Публічне управління та адміністрування</speciality>
+	<speciality>292 Міжнародні економічні відносини</speciality>
+</direction>
+</info>

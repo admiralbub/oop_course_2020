@@ -34,9 +34,10 @@ void ResultWindow::on_first_clicked()
     this->close();
 }
 
-void ResultWindow::InitStructResult()
+double ResultWindow::MaxElementResult(double max)
 {
 
+    return max;
 }
 
 double rounD(double r)
@@ -83,17 +84,17 @@ void ResultWindow::SetIntValue()
 void ResultWindow::SetColorPercent(QLabel *l, double value)
 {
     int Test = (int)value;
-    if(Test >= 45)
+    if(Test >= 35)
     {
-        l->setStyleSheet("font-size:22px;font-weight:700;color:#55ff00;");
+        l->setStyleSheet("font-size:20px;font-weight:700;color:#55ff00;");
     }
-    else if(Test >= 35)
+    else if(Test >= 25)
     {
-        l->setStyleSheet("font-size:22px;font-weight:700;color:#ffff00;");
+        l->setStyleSheet("font-size:20px;font-weight:700;color:#ffff00;");
     }
     else
     {
-        l->setStyleSheet("font-size:22px;font-weight:700;color:#FFA500;");
+        l->setStyleSheet("font-size:20px;font-weight:700;color:#FFA500;");
     }
 }
 
