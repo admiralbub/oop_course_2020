@@ -1,10 +1,11 @@
 #ifndef MYEXCEPTION_H
 #define MYEXCEPTION_H
+#include <QException>
 #include <string.h>
 #include <iostream>
 
 
-class MyException
+class MyException : public QException
 {
 public:
     MyException();
