@@ -75,13 +75,13 @@ void ResultWindow::RemarkSet()
         }
         if(newmax == Result.second)
         {
-            line += "Людина-техніка\n";
+            line += "Людина - техніка\n";
             count++;
             AddNameDirection_for_parse("Man-Technics");
         }
         if(newmax == Result.third)
         {
-            line += "Людина - мистецтво\n";
+            line += "Людина - художній образ\n";
             count++;
             AddNameDirection_for_parse("Man-Artistic-image");
         }
