@@ -49,23 +49,25 @@ void SpecialtyWindow::WriteSpecialityinTextBrowser(QStringList &l)
    resultdata->Init_xml_file_read(":/resources/DataBase/speciality.xml");
        while(resultdata->xml_stream_read.readNextStartElement())
        {
-          if(resultdata->xml_stream_read.name() == "direction")
-          {
-              foreach(const QXmlStreamAttribute &attr, resultdata->xml_stream_read.attributes())
-              {
-                  if(attr.name() == "name")
-                  {
-                      QString attribute_value = attr.value().toString();
-                      if(l.contains(attr.value().toString()))
-                      {
-                            ReadSpeciality();
-                      }
-                  }
-              }
-           }
+             while(resultdata->xml_stream_read.name() != "direction")
+             {
+                 resultdata->xml_stream_read.readNextStartElement();
+             }
+             foreach(const QXmlStreamAttribute &attr, resultdata->xml_stream_read.attributes())
+             {
+                 if(attr.name() == "name")
+                 {
+                     QString attribute_value = attr.value().toString();
+                     if(l.contains(attr.value().toString()))
+                     {
+                           ReadSpeciality();
+                     }
+                 }
+             }
        }
 
   ui->textBrowser->setText(all_speciality);
+  ui->textBrowser->setStyleSheet("font-size:16px");
   resultdata->file_xml.close();
   resultdata->~XML_Data();
 }
