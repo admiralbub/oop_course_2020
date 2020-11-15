@@ -49,7 +49,7 @@ private:
 public:
     QStringList Direction_name;
     void SetResults();
-    QStringList ReturnNameDirection_for_parse();
+    void ReturnNameDirection_for_parse();
 };
 
 #endif // RESULTWINDOW_H

@@ -2,7 +2,6 @@
 #include "ui_resultwindow.h"
 #include <QDir>
 #include <cmath>
-#include "specialtywindow.h"
 ResultWindow::ResultWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResultWindow)
@@ -12,9 +11,8 @@ ResultWindow::ResultWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
      //Переходим к тесту для выбора специальности
-    specialitytest = new SpecialtyWindow();  
+    specialitytest = new SpecialtyWindow();
     connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
-    // commit
 }
 
 ResultWindow::~ResultWindow()
@@ -25,9 +23,9 @@ ResultWindow::~ResultWindow()
 void ResultWindow::on_direction_clicked()
 {
     //Переходим к тесту для выбора специальности по напрвлениею человека
-
-    specialitytest->close();  // Показываем  окно о авторе
+    specialitytest->show();  // Показываем  окно о авторе
     this->close();    // Закрываем основное окно
+    ReturnNameDirection_for_parse();
 }
 
 void ResultWindow::on_first_clicked()
@@ -53,9 +51,14 @@ double ResultWindow::MaxElementResult()
     return max;
 }
 
-QStringList ResultWindow::ReturnNameDirection_for_parse()
+void ResultWindow::ReturnNameDirection_for_parse()
 {
-   return Direction_name;
+  specialitytest->WriteSpecialityinTextBrowser(Direction_name);
+}
+
+void ResultWindow::AddNameDirection_for_parse(QString name)
+{
+   Direction_name.push_back(name);
 }
 
 void ResultWindow::RemarkSet()
@@ -66,29 +69,29 @@ void ResultWindow::RemarkSet()
     Remark = "Напрямок, що найкраще підходить :\n";
     if(newmax == Result.first)
     {
-        line += "Людина - людина\n";
-        count++;
-        AddNameDirection_for_parse("Man-Man");
-    }
-    if(newmax == Result.second)
-    {
-        line += "Людина-техніка\n";
-        count++;
-        AddNameDirection_for_parse("Man-Technics");
-    }
-    if(newmax == Result.third)
-    {
-        line += "Людина - мистецтво\n";
-        count++;
-        AddNameDirection_for_parse("Man-Artistic-image");
-    }
+            line += "Людина - людина\n";
+            count++;
+            AddNameDirection_for_parse("Man-Man");
+        }
+        if(newmax == Result.second)
+        {
+            line += "Людина-техніка\n";
+            count++;
+            AddNameDirection_for_parse("Man-Technics");
+        }
+        if(newmax == Result.third)
+        {
+            line += "Людина - мистецтво\n";
+            count++;
+            AddNameDirection_for_parse("Man-Artistic-image");
+        }
 
-    if(newmax == Result.fourth)
-    {
-        line += "Людина - знакова система\n";
-        count++;
-        AddNameDirection_for_parse("Man-Sign-system");
-    }
+        if(newmax == Result.fourth)
+        {
+            line += "Людина - знакова система\n";
+            count++;
+            AddNameDirection_for_parse("Man-Sign-system");
+        }
     if(count >= 2)
     {
         Remark = "Напрямки, що найкраще підходять :\n";

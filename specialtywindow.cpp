@@ -3,6 +3,7 @@
 #include "ui_specialtywindow.h"
 #include<QDesktopServices>
 #include<QUrl>
+
 SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SpecialtyWindow)
@@ -10,9 +11,7 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Результат по обраному напрямку для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
-    resultwindoW = new ResultWindow();
-    connect(this, &SpecialtyWindow::WriteSpecialityinTextBrowser, resultwindoW, &ResultWindow::ReturnNameDirection_for_parse);
-    WriteSpecialityinTextBrowser();
+    resultdata = new XML_Data();
 }
 
 SpecialtyWindow::~SpecialtyWindow()
@@ -34,38 +33,39 @@ void SpecialtyWindow::on_menu_button_clicked()
     win->show();
 }
 
-void SpecialtyWindow::WriteSpecialityinTextBrowser()
+void SpecialtyWindow::ReadSpeciality()
 {
-    QStringList l = resultwindoW->ReturnNameDirection_for_parse();
-    myData->Init_xml_file_read("../oop_course_2020/DataBase/speciality.xml");
-    QString all_speciality;
-    while(myData->xml_stream_read.readNextStartElement())
+    resultdata->xml_stream_read.readNextStartElement();
+    while(resultdata->xml_stream_read.name() == "speciality")
     {
-       if(myData->xml_stream_read.name() == "direction")
+        all_speciality += resultdata->xml_stream_read.readElementText() + "\n";
+        resultdata->xml_stream_read.readNextStartElement();
+    }
+}
+
+
+void SpecialtyWindow::WriteSpecialityinTextBrowser(QStringList &l)
+{
+   resultdata->Init_xml_file_read(":/resources/DataBase/speciality.xml");
+       while(resultdata->xml_stream_read.readNextStartElement())
        {
-           foreach(const QXmlStreamAttribute &attr, myData->xml_stream_read.attributes())
-           {
-               if(attr.name() == "name")
-               {
-                   QString attribute_value = attr.value().toString();
-                   if((attr.value().toString() == "Man-Man" && l.contains("Man-Man")) ||
-                      (attr.value().toString() == "Man-Technics" && l.contains("Man_Technics")) ||
-                      (attr.value().toString() == "Man-Artistic-image" && l.contains("Man-Artistic-image"))||
-                      (attr.value().toString() == "Man-Sign-system" && l.contains("Man-Sign-system")))
-                   {
-                      myData->xml_stream_read.readNextStartElement();
-                      while(myData->xml_stream_read.name() == "speciality")
+          if(resultdata->xml_stream_read.name() == "direction")
+          {
+              foreach(const QXmlStreamAttribute &attr, resultdata->xml_stream_read.attributes())
+              {
+                  if(attr.name() == "name")
+                  {
+                      QString attribute_value = attr.value().toString();
+                      if(l.contains(attr.value().toString()))
                       {
-                          all_speciality += myData->xml_stream_read.readElementText() + "\n";
-                          myData->xml_stream_read.readNextStartElement();
+                            ReadSpeciality();
                       }
-                   }
-               }
-             }
+                  }
+              }
+           }
        }
 
-    }
-    ui->textBrowser->setText(all_speciality);
-    myData->file_xml.close();
-    myData->~XML_Data();
+  ui->textBrowser->setText(all_speciality);
+  resultdata->file_xml.close();
+  resultdata->~XML_Data();
 }
