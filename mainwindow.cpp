@@ -4,7 +4,7 @@
 #include <QMediaPlayer>
 #include "resultwindow.h"
 #include "QDebug.h"
-bool viz;
+bool viz = true;
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
 
@@ -37,7 +37,10 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(playlist);
-    music->play();
+    if(viz) {
+       music->play();
+       viz = false;
+    }
 
     connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::pause);
     connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);

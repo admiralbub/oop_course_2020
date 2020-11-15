@@ -3,7 +3,8 @@
 #include "ui_specialtywindow.h"
 #include<QDesktopServices>
 #include<QUrl>
-
+#include <QThread>
+#include <QMediaPlayer>
 SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SpecialtyWindow)
@@ -12,6 +13,7 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     setWindowTitle("Результат по обраному напрямку для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     resultdata = new XML_Data();
+
 }
 
 SpecialtyWindow::~SpecialtyWindow()
@@ -31,9 +33,7 @@ void SpecialtyWindow::on_menu_button_clicked()
     auto win = new MainWindow();
     win->setAttribute( Qt::WA_DeleteOnClose );
     win->show();
-    char oldfilename[] = "qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3";
-    char newfilename[] = "qrc:/resources/sounds/Paul Maur2iat - Love Is Blue.mp3";
-    rename( oldfilename, newfilename );
+
 }
 
 void SpecialtyWindow::ReadSpeciality()
