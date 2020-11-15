@@ -31,6 +31,9 @@ void SpecialtyWindow::on_menu_button_clicked()
     auto win = new MainWindow();
     win->setAttribute( Qt::WA_DeleteOnClose );
     win->show();
+    char oldfilename[] = "qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3";
+    char newfilename[] = "qrc:/resources/sounds/Paul Maur2iat - Love Is Blue.mp3";
+    rename( oldfilename, newfilename );
 }
 
 void SpecialtyWindow::ReadSpeciality()

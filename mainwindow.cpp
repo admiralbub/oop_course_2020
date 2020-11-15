@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
-
+    int b=0;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3"));
@@ -44,8 +44,10 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
      ui->button_nomus->setVisible(false);
 
+     connect(music, &QMediaPlayer::mediaStatusChanged, this, [=]() {
+          qDebug() << "Media Status:" << music->mediaStatus();
 
-
+     });
 }
 
 MainWindow::~MainWindow()
