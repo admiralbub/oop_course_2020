@@ -152,7 +152,7 @@ void TestWindow::Restart_test()
     }
     QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
     data->Init_xml_file_write(file_name_xml);
-    ui->label_score->setText("Питання 1 з 10");
+    ui->label_score->setText("Питання 1 з 12");
     data->counter_question = 0;
     data->stream.seek(0);
     // Здесь по идеи курсор в файле переносим на начало и должна происходить сортировка
