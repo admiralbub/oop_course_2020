@@ -101,7 +101,7 @@ font-weight:600;</string>
 font-weight:600;</string>
     </property>
     <property name="text">
-     <string>Питання 1 з 10</string>
+     <string>Питання 1 з 12</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
