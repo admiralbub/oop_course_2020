@@ -84,7 +84,7 @@ color:#fff;</string>
 font-weight:600;</string>
     </property>
     <property name="text">
-     <string>Пройдіть тест для вибору вашого напрямку</string>
+     <string>Визначте, чи стосується вас це твердження:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_score">

@@ -31,7 +31,7 @@ color:#fff;</string>
      <string notr="true">font-size:21px;</string>
     </property>
     <property name="text">
-     <string>Результат по обраному напрямку для навчання&lt;br&gt; в НУ Запорізька політехніка</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Результат по обраному напрямку для навчання&lt;br/&gt;в НУ &amp;quot;Запорізька політехніка&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="menu_button">

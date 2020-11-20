@@ -32,7 +32,7 @@ void HelpWindow::on_back_clicked()
 
 void HelpWindow::on_telegram_clicked()
 {
-    QString link = "t.me/artemdikarev";
+    QString link = "http://t.me/artemdikarev";
     QDesktopServices::openUrl(QUrl(link));
 
 }
