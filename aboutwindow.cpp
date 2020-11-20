@@ -6,7 +6,7 @@ AboutWindow::AboutWindow(QWidget *parent) :
     ui(new Ui::AboutWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Інформація про розробників!");
+    setWindowTitle("Інформація про розробників");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     QPixmap pix(":/resources/image/vstup-na-budzhet-2019_1.jpg");

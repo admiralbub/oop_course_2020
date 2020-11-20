@@ -40,7 +40,7 @@ private:
     Ui::MainWindow *ui;
     AboutWindow *sWindow;
     HelpWindow *thirdWindow;
-    TestWindow *lestWindow;
+    TestWindow *testWindow;
 
 };
 #endif // MAINWINDOW_H

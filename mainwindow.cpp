@@ -4,11 +4,12 @@
 #include <QMediaPlayer>
 #include "resultwindow.h"
 #include "QDebug.h"
+
 bool viz = true;
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
 
-    setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
+    setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ «Запорізька політехніка»!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     // Инициализируем  окно о авторе
@@ -20,19 +21,15 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     connect(thirdWindow, &HelpWindow::firstWindow, this, &MainWindow::show);
 
     // Инициализируем окно с тестами
-    lestWindow = new TestWindow();
-    connect(lestWindow, &TestWindow::firstWindow, this, &MainWindow::show);
-
-
-
+    testWindow = new TestWindow();
+    connect(testWindow, &TestWindow::firstWindow, this, &MainWindow::show);
 
     //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
-    int b=0;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl("qrc:/resources/sounds/Paul Mauriat - Love Is Blue.mp3"));
+    playlist->addMedia(QUrl("qrc:/resources/sounds/Гражданская Оборона - Свой среди чужих.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();
@@ -64,7 +61,7 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    lestWindow->show();  // Показываем  окно с тестами
+    testWindow->show();  // Показываем  окно с тестами
     this->close();    // Закрываем основное окно
 }
 

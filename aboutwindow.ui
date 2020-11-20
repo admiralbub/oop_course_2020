@@ -121,7 +121,7 @@ font-weight:600;</string>
 </string>
     </property>
     <property name="text">
-     <string>Дикарьов.А - Графічний інтерфейс</string>
+     <string>Дикарьов Артем - Графічний інтерфейс</string>
     </property>
    </widget>
    <widget class="QLabel" name="author_2">
@@ -137,7 +137,7 @@ font-weight:600;</string>
      <string notr="true">font-size:14px;</string>
     </property>
     <property name="text">
-     <string>Зуєв.Б - Робота з даними</string>
+     <string>Зуєв Богдан - Робота з даними</string>
     </property>
    </widget>
    <widget class="QLabel" name="author_3">
@@ -153,7 +153,7 @@ font-weight:600;</string>
      <string notr="true">font-size:14px;</string>
     </property>
     <property name="text">
-     <string>Долженко.Ф - Реалізація алгоритмів</string>
+     <string>Долженко Філіпп - Реалізація алгоритмів</string>
     </property>
    </widget>
    <widget class="QLabel" name="author_4">
@@ -169,7 +169,7 @@ font-weight:600;</string>
      <string notr="true">font-size:14px;</string>
     </property>
     <property name="text">
-     <string>Паламарчук.А - Обробка виняткових ситуацій</string>
+     <string>Паламарчук Артем - Обробка виняткових ситуацій</string>
     </property>
    </widget>
   </widget>

@@ -1,8 +1,8 @@
 #include "specialtywindow.h"
 #include "mainwindow.h"
 #include "ui_specialtywindow.h"
-#include<QDesktopServices>
-#include<QUrl>
+#include <QDesktopServices>
+#include <QUrl>
 #include <QThread>
 #include <QMediaPlayer>
 SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
@@ -10,7 +10,7 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     ui(new Ui::SpecialtyWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Результат по обраному напрямку для навчання в НУ Запорізька політехніка!");
+    setWindowTitle("Результат по обраному напрямку для навчання в НУ «Запорізька політехніка»!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     resultdata = new XML_Data();
 

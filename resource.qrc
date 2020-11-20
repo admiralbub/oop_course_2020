@@ -2,12 +2,12 @@
     <qresource prefix="/resources">
         <file>image/1200px-Taras_Shevchenko_selfportrait_oil_1840-2.jpg</file>
         <file>image/header-object.png</file>
-        <file>sounds/Original Tetris theme (Tetris Soundtrack).mp3</file>
         <file>image/vstup-na-budzhet-2019_1.jpg</file>
-        <file>sounds/Paul Mauriat - Love Is Blue.mp3</file>
         <file>database.txt</file>
         <file>DataBase/questions_directions.csv</file>
-        <file>image/kisspng.jpg</file>
         <file>DataBase/speciality.xml</file>
+        <file>image/sound off.png</file>
+        <file>image/sound on.png</file>
+        <file>sounds/Гражданская Оборона - Свой среди чужих.mp3</file>
     </qresource>
 </RCC>

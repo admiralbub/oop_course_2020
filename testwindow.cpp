@@ -48,7 +48,7 @@ void TestWindow::Process_Questions_count()
         data->Write_Answer_in_file("Man-Sign-system",QString::number(MainStruct.Man_Sign_System));
         data->Write_End_Root_Element();
         data->CloseFile();
-        // Закрывать xml файл не надо, он закрывается ондновременно с файлом с вопросами! функция data->CloseFile
+        // Закрывать xml файл не надо, он закрывается одновременно с файлом с вопросами! функция data->CloseFile
         resultWindow->show(); // открываем окно с результатами
         resultWindow->SetResults();
         this->close();
@@ -105,7 +105,7 @@ void TestWindow::ReadFile()
     {
         line = data->stream.readLine(); // разбиваем считанную строку на список
     }
-    l = line.split(';'); // первый елемент - вопрос, второй - направление
+    l = line.split(';'); // первый элемент - вопрос, второй - направление
     ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
     if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
@@ -155,7 +155,7 @@ void TestWindow::Restart_test()
     ui->label_score->setText("Питання 1 з 12");
     data->counter_question = 0;
     data->stream.seek(0);
-    // Здесь по идеи курсор в файле переносим на начало и должна происходить сортировка
+    // Здесь курсор в файле переносим на начало и должна происходить сортировка
     // Считываем новый вопрос
     ReadFile();
 }

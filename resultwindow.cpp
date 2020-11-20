@@ -7,7 +7,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
     ui(new Ui::ResultWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Результат тестування з 1 частини!");
+    setWindowTitle("Результат тестування");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
      //Переходим к тесту для выбора специальности
@@ -66,35 +66,35 @@ void ResultWindow::RemarkSet()
     double newmax = MaxElementResult();
     int count = 0;
     QString line;
-    Remark = "Напрямок, що найкраще підходить :\n";
+    Remark = "Напрямок, що найкраще підходить:\n";
     if(newmax == Result.first)
     {
-            line += "Людина - людина\n";
+            line += "Робота з людьми\n";
             count++;
             AddNameDirection_for_parse("Man-Man");
         }
         if(newmax == Result.second)
         {
-            line += "Людина - техніка\n";
+            line += "Робота з технікою\n";
             count++;
             AddNameDirection_for_parse("Man-Technics");
         }
         if(newmax == Result.third)
         {
-            line += "Людина - художній образ\n";
+            line += "Творча робота\n";
             count++;
             AddNameDirection_for_parse("Man-Artistic-image");
         }
 
         if(newmax == Result.fourth)
         {
-            line += "Людина - знакова система\n";
+            line += "Робота зі знаковими системами\n";
             count++;
             AddNameDirection_for_parse("Man-Sign-system");
         }
     if(count >= 2)
     {
-        Remark = "Напрямки, що найкраще підходять :\n";
+        Remark = "Напрямки, що найкраще підходять:\n";
     }
     Remark += line;
     ui->system_info->setText(Remark);
