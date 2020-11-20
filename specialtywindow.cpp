@@ -31,7 +31,6 @@ void SpecialtyWindow::on_menu_button_clicked()
 {
     this->close();
     auto win = new MainWindow();
-    win->setAttribute( Qt::WA_DeleteOnClose );
     win->show();
 
 }
