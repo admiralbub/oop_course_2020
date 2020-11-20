@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>877</width>
+    <height>641</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@ font-size:16px;</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>490</y>
+      <y>510</y>
       <width>121</width>
       <height>41</height>
      </rect>
@@ -78,10 +78,10 @@ font-size:16px;</string>
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>620</x>
       <y>180</y>
-      <width>141</width>
-      <height>131</height>
+      <width>191</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="text">
@@ -234,7 +234,7 @@ font-size:16px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>877</width>
      <height>27</height>
     </rect>
    </property>

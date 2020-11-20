@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>891</width>
-    <height>663</height>
+    <width>877</width>
+    <height>641</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>891</width>
+     <width>877</width>
      <height>21</height>
     </rect>
    </property>
