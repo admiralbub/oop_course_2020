@@ -75,6 +75,13 @@ void ResultWindow::SetIntValue() {
     ui->system_2->setText(Result[2].name);
     ui->system_3->setText(Result[3].name);
     ui->system_4->setText(Result[4].name);
+    ui->system_1->setStyleSheet("font-size:20px;");
+    ui->system_2->setStyleSheet("font-size:20px;");
+    ui->system_3->setStyleSheet("font-size:20px;");
+    ui->system_4->setStyleSheet("font-size:20px;");
+
+
+
     ui->balls_1->setText(QString::number(Result[1].res) + " %");
     ui->balls_2->setText(QString::number(Result[2].res) + " %");
     ui->balls_3->setText(QString::number(Result[3].res) + " %");

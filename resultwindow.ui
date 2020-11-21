@@ -115,9 +115,9 @@ color:#fff;</string>
    <widget class="QLabel" name="balls_1">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>390</x>
       <y>180</y>
-      <width>71</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -134,9 +134,9 @@ color:rgb(255, 170, 0);
    <widget class="QLabel" name="balls_2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>390</x>
       <y>230</y>
-      <width>71</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -151,9 +151,9 @@ font-weight:700;</string>
    <widget class="QLabel" name="balls_3">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>390</x>
       <y>280</y>
-      <width>71</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -168,9 +168,9 @@ font-weight:700;</string>
    <widget class="QLabel" name="balls_4">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>390</x>
       <y>330</y>
-      <width>71</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
