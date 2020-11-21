@@ -27,7 +27,7 @@ void ResultWindow::on_direction_clicked() {
 
 void ResultWindow::on_first_clicked() {
     this->close();
-    auto win = new MainWindow();
+    auto win = new  MainWindow();
     win->show();
 }
 
