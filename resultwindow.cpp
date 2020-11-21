@@ -8,8 +8,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Результат тестування");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
-
-     //Переходим к тесту для выбора специальности
+    //Переходим к тесту для выбора специальности
     specialitytest = new SpecialtyWindow();
     connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
 }
@@ -19,9 +18,9 @@ ResultWindow::~ResultWindow() {
 }
 
 void ResultWindow::on_direction_clicked() {
-    //Переходим к тесту для выбора специальности по напрвлениею человека
-    specialitytest->show();  // Показываем  окно о авторе
-    this->close();    // Закрываем основное окно
+    //Переходим к тесту для выбора специальности
+    specialitytest->show();
+    this->close();
     ReturnNameDirection_for_parse();
 }
 
@@ -40,46 +39,11 @@ void ResultWindow::AddNameDirection_for_parse() {
            Direction_name.push_back(Result[i].code);
 }
 
-/*
-void ResultWindow::RemarkSet() {
-    double newmax = MaxElementResult();
-    int count = 0;
-    QString line;
-    if(count > 1)
-        Remark = "Напрямки, що найкраще підходять:\n";
-    else
-        Remark = "Напрямок, що найкраще підходить:\n";
-    if(newmax == Result[1].res) {
-        line += "Робота з людьми\n";
-        count++;
-        AddNameDirection_for_parse("Man-Man");
-    }
-    if(newmax == Result[2]) {
-        line += "Робота з технікою\n";
-        count++;
-        AddNameDirection_for_parse("Man-Technics");
-    }
-    if(newmax == Result[3]) {
-        line += "Творча робота\n";
-        count++;
-        AddNameDirection_for_parse("Man-Artistic-image");
-    }
-    if(newmax == Result[4]) {
-        line += "Робота зі знаковими системами\n";
-        count++;
-        AddNameDirection_for_parse("Man-Sign-system");
-    }
-    Remark += line;
-    ui->system_info->setText(Remark);
-    ui->system_info->setStyleSheet("font-size:18px");
-}
-*/
+//double rounD(double r) {
+//    return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
+//}
 
-double rounD(double r) {
-    return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
-}
-
-void ResultWindow::Count_Percent() {
+/*void ResultWindow::Count_Percent() {
     Result[0].res = Result[1].res + Result[2].res + Result[3].res + Result[4].res;
     double Temp = 100.0 / Result[0].res;
     Result[1].res = rounD(Result[1].res*Temp);
@@ -90,7 +54,7 @@ void ResultWindow::Count_Percent() {
         Result[4].res--;
     while(Result[1].res + Result[2].res + Result[3].res+Result[4].res < 100)
         Result[3].res++;
-}
+}*/
 
 void ResultWindow::Sort() {
     result temp;
@@ -103,23 +67,15 @@ void ResultWindow::Sort() {
             }
 }
 
-/*
-double ResultWindow::MaxElementResult() {
-    double max = Result[1];
-    if(Result[2] > max)
-         max = Result[2];
-    if(Result[3] > max)
-        max = Result[3];
-    if(Result[4] > max)
-        max = Result[4];
-    return max;
-}*/
-
 void ResultWindow::SetIntValue() {
+    ui->system_1->setText(Result[1].name);
+    ui->system_2->setText(Result[2].name);
+    ui->system_3->setText(Result[3].name);
+    ui->system_4->setText(Result[4].name);
     ui->balls_1->setText(QString::number(Result[1].res) + " %");
     ui->balls_2->setText(QString::number(Result[2].res) + " %");
     ui->balls_3->setText(QString::number(Result[3].res) + " %");
-    ui->balls_4->setText(QString::number(Result[4].res)+ " %");
+    ui->balls_4->setText(QString::number(Result[4].res) + " %");
     SetColorPercent(ui->balls_1, Result[1].res);
     SetColorPercent(ui->balls_2, Result[2].res);
     SetColorPercent(ui->balls_3, Result[3].res);
@@ -149,19 +105,19 @@ void ResultWindow::SetResults() {
                 if(attr.name() == "name") {
                     QString attribute_value = attr.value().toString();
                     if(attr.value().toString() == Result[1].code)
-                        Result[1].res = xml_data.xml_stream_read.readElementText().toDouble();
+                        Result[1].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
                     else if(attr.value().toString() == Result[2].code)
-                        Result[2].res = xml_data.xml_stream_read.readElementText().toDouble();
+                        Result[2].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
                     else if(attr.value().toString() == Result[3].code)
-                        Result[3].res = xml_data.xml_stream_read.readElementText().toDouble();
+                        Result[3].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
                     else
-                        Result[4].res = xml_data.xml_stream_read.readElementText().toDouble();
+                        Result[4].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
                 }
              }
          }
     }
     xml_data.file_xml.close();
-    Count_Percent();
+    //Count_Percent();
     Sort();
     SetIntValue();
     AddNameDirection_for_parse();

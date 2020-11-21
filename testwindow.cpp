@@ -16,7 +16,7 @@ TestWindow::TestWindow(QWidget *parent) :
     // подключаем к слоту запуска главного окна по кнопке в третьем окне
     connect(resultWindow, &ResultWindow::resultWindow, this, &TestWindow::show);
     connect(this,&TestWindow::close, resultWindow, &ResultWindow::SetResults);
-    data = new MyData(12); // указываем количество вопросов теста
+    data = new MyData(16); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
     Init_Struct_Dir_name();
@@ -110,7 +110,7 @@ void TestWindow::ReadFile()
     if(data->counter_question >= 2) // если номер вопроса больше или равен
     {
         QString convert_int;
-        ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 12");
+        ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 16");
         // формируем строку "номер вопроса"
     }
 }
@@ -152,7 +152,7 @@ void TestWindow::Restart_test()
     }
     QString file_name_xml = "../oop_course_2020/DataBase/answer_directions.xml";
     data->Init_xml_file_write(file_name_xml);
-    ui->label_score->setText("Питання 1 з 12");
+    ui->label_score->setText("Питання 1 з 16");
     data->counter_question = 0;
     data->stream.seek(0);
     // Здесь курсор в файле переносим на начало и должна происходить сортировка

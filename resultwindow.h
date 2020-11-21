@@ -30,7 +30,7 @@ private:
     XML_Data xml_data;
     struct result
     {
-        std::string name;
+        QString name;
         QString code;
         double res;
     };
