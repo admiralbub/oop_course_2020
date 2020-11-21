@@ -1,5 +1,6 @@
 #include "resultwindow.h"
 #include "ui_resultwindow.h"
+#include "mainwindow.h"
 #include <QDir>
 #include <cmath>
 ResultWindow::ResultWindow(QWidget *parent) :
@@ -26,6 +27,8 @@ void ResultWindow::on_direction_clicked() {
 
 void ResultWindow::on_first_clicked() {
     this->close();
+    auto win = new MainWindow();
+    win->show();
 }
 
 void ResultWindow::ReturnNameDirection_for_parse() {

@@ -222,7 +222,7 @@ p, li { white-space: pre-wrap; }
 }</string>
     </property>
     <property name="text">
-     <string>Вихід</string>
+     <string>В меню</string>
     </property>
    </widget>
    <widget class="QPushButton" name="direction">
