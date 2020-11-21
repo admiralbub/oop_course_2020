@@ -96,7 +96,7 @@ void ResultWindow::SetResults() {
     Result[1] = {"Робота з людьми", "Man-Man", 0};
     Result[2] = {"Робота з технікою", "Man-Technics", 0};
     Result[3] = {"Творча робота", "Man-Artistic-image", 0};
-    Result[4] = {"Робота з людьми", "Man-Sign-system", 0};
+    Result[4] = {"Робота зі знаковою системою", "Man-Sign-system", 0};
 
     xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
         while(xml_data.xml_stream_read.readNextStartElement()) {
