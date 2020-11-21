@@ -30,22 +30,21 @@ private:
     XML_Data xml_data;
     struct result
     {
-        double all_balls;
-        double first;
-        double second;
-        double third;
-        double fourth;
+        std::string name;
+        QString code;
+        double res;
     };
     QString Remark;
-    result Result;
+    result Result[5];
 private:
     void InitStructResult();
     void Count_Percent();
     double MaxElementResult();
     void SetColorPercent(QLabel *l, double value);
     void SetIntValue();
-    void RemarkSet();
-    void AddNameDirection_for_parse(QString name);
+    void Sort();
+    //void RemarkSet();
+    void AddNameDirection_for_parse();
 public:
     QStringList Direction_name;
     void SetResults();
