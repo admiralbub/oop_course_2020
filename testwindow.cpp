@@ -10,6 +10,8 @@ TestWindow::TestWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+    setMinimumSize(877, 641);
+            setMaximumSize(877, 641);
     //Тут грузим картинку для теста
     // Инициализируем третье окно
     resultWindow = new ResultWindow();

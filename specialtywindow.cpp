@@ -12,6 +12,8 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Результат по обраному напрямку для навчання в НУ «Запорізька політехніка»");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+    setMinimumSize(877, 672);
+    setMaximumSize(877, 672);
     resultdata = new XML_Data();
 
 }

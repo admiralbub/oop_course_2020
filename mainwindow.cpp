@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ «Запорізька політехніка»!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
+    setMinimumSize(877, 641);
+            setMaximumSize(877, 641);
+
     // Инициализируем  окно о авторе
     sWindow = new AboutWindow();
     connect(sWindow, &AboutWindow::firstWindow, this, &MainWindow::show);

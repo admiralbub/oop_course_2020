@@ -11,6 +11,8 @@ AboutWindow::AboutWindow(QWidget *parent) :
 
     QPixmap pix(":/resources/image/vstup-na-budzhet-2019_1.jpg");
     ui->label_image->setPixmap(pix.scaled(300,600,Qt::KeepAspectRatio));
+    setMinimumSize(877, 641);
+            setMaximumSize(877, 641);
 }
 
 AboutWindow::~AboutWindow()

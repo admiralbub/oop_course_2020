@@ -10,6 +10,8 @@ HelpWindow::HelpWindow(QWidget *parent) :
 
     setWindowTitle("Допомога щодо використання програми");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+    setMinimumSize(877, 641);
+            setMaximumSize(877, 641);
     update();
     //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");

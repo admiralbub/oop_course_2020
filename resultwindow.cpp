@@ -9,6 +9,8 @@ ResultWindow::ResultWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Результат тестування");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+    setMinimumSize(877, 672);
+    setMaximumSize(877, 672);
     //Переходим к тесту для выбора специальности
     specialitytest = new SpecialtyWindow();
     connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
