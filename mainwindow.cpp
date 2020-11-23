@@ -3,7 +3,7 @@
 #include <QPixmap>
 #include <QMediaPlayer>
 #include "resultwindow.h"
-#include "QDebug.h"
+#include "QDebug"
 
 bool viz = true;
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){

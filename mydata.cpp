@@ -1,10 +1,13 @@
 #include "mydata.h"
+#include "myexception.h"
 
 void XML_Data::Init_xml_file_read(QString name_file)
 {
     Init_xml_file(name_file);
     xml_stream_read.setDevice(&file_xml);
-    file_xml.open(QIODevice::ReadOnly);
+    if (!file_xml.open(QIODevice::ReadOnly)){
+        pMyException->throwException(QString("Не смогли отрыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO));
+    }
 }
 
 void XML_Data::Init_xml_file(QString name_file)
@@ -16,7 +19,9 @@ void XML_Data::Init_xml_file_write(QString name_file)
 {
     xml_stream.setDevice(&file_xml);
     Init_xml_file(name_file);
-    file_xml.open(QIODevice::WriteOnly);
+    if (!file_xml.open(QIODevice::WriteOnly)){
+        pMyException->throwException(QString("Не смогли отрыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO));
+    }
 }
 
 void MyData::Write_Answer_in_file(QString name, QString result)
@@ -63,13 +68,17 @@ void MyData::InitFile (QString name_file)
 void MyData::OpenForRead(QFile &q, QString name_file)
 {
     InitFile(name_file);
-    q.open(QIODevice::ReadOnly);
+    if (!q.open(QIODevice::ReadOnly)){
+        pMyException->throwException(QString("Не смогли отрыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO));
+    }
 }
 
 void MyData::OpenForWrite(QFile &q, QString name_file)
 {
     InitFile(name_file);
-    q.open(QIODevice::WriteOnly);
+    if (!q.open(QIODevice::WriteOnly)){
+        pMyException->throwException(QString("Не смогли отрыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO));
+    }
 }
 
 int MyData::getNumberAlQuestions()
