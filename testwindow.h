@@ -18,7 +18,7 @@ public:
     ~TestWindow();
 private:
     void ReadFile();
-    void Process_Questions_count();
+    bool Process_Questions_count();
 signals:
     void firstWindow();
 private slots:

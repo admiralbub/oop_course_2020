@@ -41,7 +41,7 @@ TestWindow::~TestWindow()
     delete data;
 }
 
-void TestWindow::Process_Questions_count()
+bool TestWindow::Process_Questions_count()
 {
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
@@ -56,8 +56,10 @@ void TestWindow::Process_Questions_count()
         resultWindow->show(); // открываем окно с результатами
         resultWindow->SetResults();
         this->close();
+        return false;
     }
     data->counter_question++; // порядковый номер вопроса увеличиваем на 1
+    return true;
 }
 
 void TestWindow::Count_direct_score_if_answer_true()
@@ -105,26 +107,27 @@ void TestWindow::Mixer_for_questions()
 {
     if(data->file.isOpen())
     {
-    while(!data->stream.atEnd())
-    {
+     while(!data->stream.atEnd())
+        {
         mylist->push_back(data->stream.readLine());
-    }
-     mylist->push_back("");
+        }
     }
     // в списке QStringList mylist происходит сортировка
 }
 
 void TestWindow::ReadFile()
 {
-    Process_Questions_count();
-    QString line = mylist->at(data->counter_question - 1);
-    l = line.split(';'); // первый элемент - вопрос, второй - направление
-    ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
-    if(data->counter_question >= 2) // если номер вопроса больше или равен
+    if(Process_Questions_count())
     {
-        QString convert_int;
-        ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 16");
-        // формируем строку "номер вопроса"
+        QString line = mylist->at(data->counter_question - 1);
+        l = line.split(';'); // первый элемент - вопрос, второй - направление
+        ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
+        if(data->counter_question >= 2) // если номер вопроса больше или равен
+        {
+            QString convert_int;
+            ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 16");
+
+        }
     }
 }
 
