@@ -33,6 +33,8 @@ private slots:
 
     void Restart_test();
 
+    void Mixer_for_questions();
+
     void on_pushButton_first_clicked();
 
 private:
@@ -40,6 +42,7 @@ private:
     ResultWindow *resultWindow;
     MyData *data;
     QStringList l;
+    QStringList *mylist;
     struct Directions_name
     {
         int Man_Man;

@@ -21,7 +21,9 @@ TestWindow::TestWindow(QWidget *parent) :
     data = new MyData(16); // указываем количество вопросов теста
     QString file_name = ":/resources/DataBase/questions_directions.csv";
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
+    mylist = new QStringList();
     Init_Struct_Dir_name();
+    Mixer_for_questions();
     Restart_test();
 }
 
@@ -99,14 +101,23 @@ void TestWindow::Count_direct_score_if_answer_not_determined()
     }
 }
 
+void TestWindow::Mixer_for_questions()
+{
+    if(data->file.isOpen())
+    {
+    while(!data->stream.atEnd())
+    {
+        mylist->push_back(data->stream.readLine());
+    }
+     mylist->push_back("");
+    }
+    // в списке QStringList mylist происходит сортировка
+}
+
 void TestWindow::ReadFile()
 {
     Process_Questions_count();
-    QString line;
-    if(data->file.isOpen())
-    {
-        line = data->stream.readLine(); // разбиваем считанную строку на список
-    }
+    QString line = mylist->at(data->counter_question - 1);
     l = line.split(';'); // первый элемент - вопрос, второй - направление
     ui->question->setText(l[0]);// считываем и записываем вопрос в строчку
     if(data->counter_question >= 2) // если номер вопроса больше или равен
