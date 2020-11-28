@@ -1,8 +1,12 @@
 #include "myexception.h"
-
 #include "mainwindow.h"
 
 MyException::MyException(QObject *parent) : QObject(parent)
+{
+
+}
+
+MyException::~MyException()
 {
 
 }
@@ -13,8 +17,6 @@ void MyException::throwException(QString msg, QString functionName)
     QMessageBox::critical(m_parentWidget, QString ("Ошибка в %1").arg(functionName), errorMsg);
     quitApp();
 }
-
-
 
 QWidget *MyException::parentWidget() const
 {

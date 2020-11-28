@@ -22,6 +22,7 @@ class MyException : QObject{
 
 public:
     MyException(QObject *parent = nullptr);
+    ~MyException();
 
     Q_SLOT void throwException (QString msg, QString functionName);
 
