@@ -23,7 +23,8 @@ TestWindow::TestWindow(QWidget *parent) :
     data->OpenForRead(data->file,file_name); // открываем нужный нам файл
     mylist = new QStringList();
     Init_Struct_Dir_name();
-    Mixer_for_questions();
+    Read_questions();
+    Randomize_questions();
     Restart_test();
 }
 
@@ -103,17 +104,24 @@ void TestWindow::Count_direct_score_if_answer_not_determined()
     }
 }
 
-void TestWindow::Mixer_for_questions()
+void TestWindow::Read_questions()
 {
     if(data->file.isOpen())
-    {
-     while(!data->stream.atEnd())
-        {
-        mylist->push_back(data->stream.readLine());
-        }
-    }
-    // в списке QStringList mylist происходит сортировка
+        while(!data->stream.atEnd())
+            mylist->push_back(data->stream.readLine());
 }
+
+void TestWindow::Randomize_questions()
+{
+    for (int i = mylist->count() - 1; i >= 1; i--)
+    {
+       int j = rand()%(i + 1);
+       QStringList temp = mylist[j];
+       mylist[j] = mylist[i];
+       mylist[i] = temp;
+    }
+}
+
 
 void TestWindow::ReadFile()
 {

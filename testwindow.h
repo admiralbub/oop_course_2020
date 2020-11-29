@@ -33,7 +33,9 @@ private slots:
 
     void Restart_test();
 
-    void Mixer_for_questions();
+    void Read_questions();
+
+    void Randomize_questions();
 
     void on_pushButton_first_clicked();
 
