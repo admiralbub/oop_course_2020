@@ -6,6 +6,9 @@
 #include "QDebug"
 
 bool viz = true;
+bool mus = true;
+QMediaPlayer *music;
+
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
 
@@ -13,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     setMinimumSize(877, 641);
-            setMaximumSize(877, 641);
+    setMaximumSize(877, 641);
 
     // Инициализируем  окно о авторе
     sWindow = new AboutWindow();
@@ -35,22 +38,13 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     playlist->addMedia(QUrl("qrc:/resources/sounds/Гражданская Оборона - Свой среди чужих.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
-    QMediaPlayer *music = new QMediaPlayer();
+    music = new QMediaPlayer();
     music->setPlaylist(playlist);
-    if(viz) {
-       music->play();
-       viz = false;
-    }
+    //music->play();
 
-    connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::pause);
-    connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);
-
-     ui->button_nomus->setVisible(false);
-
-     connect(music, &QMediaPlayer::mediaStatusChanged, this, [=]() {
+    connect(music, &QMediaPlayer::mediaStatusChanged, this, [=]() {
           qDebug() << "Media Status:" << music->mediaStatus();
-
-     });
+    });
 }
 
 MainWindow::~MainWindow()
@@ -81,15 +75,15 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_button_mus_clicked()
 {
-    ui->button_mus->setVisible(false);
-    ui->button_nomus->setVisible(true);
-
-}
-
-
-
-void MainWindow::on_button_nomus_clicked()
-{
-    ui->button_nomus->setVisible(false);
-    ui->button_mus->setVisible(true);
+    if (mus) {
+        //music->pause();
+        ui->button_mus->setIcon(QIcon(":/resources/image/sound off.png"));
+        ui->button_mus->setIconSize(QSize(50, 50));
+    }
+    else {
+        //music->play();
+        ui->button_mus->setIcon(QIcon(":/resources/image/sound on.png"));
+        ui->button_mus->setIconSize(QSize(50, 50));
+    }
+    mus = !mus;
 }
