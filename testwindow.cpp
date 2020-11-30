@@ -113,11 +113,11 @@ void TestWindow::Read_questions()
 
 void TestWindow::Randomize_questions()
 {
-    srand(time(NULL));
+    srand(time(0));
     for (int i = mylist->count() - 1; i >= 1; i--)
        {
           int j = rand()%(i + 1);
-          mylist->swap(i,j);
+          mylist->swapItemsAt(i,j);
        }
 
 }
