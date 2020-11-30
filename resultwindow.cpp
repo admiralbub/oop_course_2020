@@ -44,23 +44,6 @@ void ResultWindow::AddNameDirection_for_parse() {
            Direction_name.push_back(Result[i].code);
 }
 
-//double rounD(double r) {
-//    return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
-//}
-
-/*void ResultWindow::Count_Percent() {
-    Result[0].res = Result[1].res + Result[2].res + Result[3].res + Result[4].res;
-    double Temp = 100.0 / Result[0].res;
-    Result[1].res = rounD(Result[1].res*Temp);
-    Result[2].res = rounD(Result[2].res*Temp);
-    Result[3].res = rounD(Result[3].res*Temp);
-    Result[4].res = rounD(Result[4].res*Temp);
-    while(Result[1].res + Result[2].res + Result[3].res + Result[4].res > 100)
-        Result[4].res--;
-    while(Result[1].res + Result[2].res + Result[3].res+Result[4].res < 100)
-        Result[3].res++;
-}*/
-
 void ResultWindow::Sort() {
     result temp;
     for (int i=0; i<4; i++)
@@ -81,9 +64,6 @@ void ResultWindow::SetIntValue() {
     ui->system_2->setStyleSheet("font-size:20px;");
     ui->system_3->setStyleSheet("font-size:20px;");
     ui->system_4->setStyleSheet("font-size:20px;");
-
-
-
     ui->balls_1->setText(QString::number(Result[1].res) + " %");
     ui->balls_2->setText(QString::number(Result[2].res) + " %");
     ui->balls_3->setText(QString::number(Result[3].res) + " %");
@@ -129,9 +109,7 @@ void ResultWindow::SetResults() {
          }
     }
     xml_data.file_xml.close();
-    //Count_Percent();
     Sort();
     SetIntValue();
     AddNameDirection_for_parse();
-    //RemarkSet();
 }
