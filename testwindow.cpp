@@ -117,7 +117,7 @@ void TestWindow::Randomize_questions()
     for (int i = mylist->count() - 1; i >= 1; i--)
        {
           int j = rand()%(i + 1);
-          mylist->swapItemsAt(i,j);
+          mylist->swap(i,j);
        }
 
 }
