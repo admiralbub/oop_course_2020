@@ -113,13 +113,13 @@ void TestWindow::Read_questions()
 
 void TestWindow::Randomize_questions()
 {
+    srand(time(NULL));
     for (int i = mylist->count() - 1; i >= 1; i--)
-    {
-       int j = rand()%(i + 1);
-       QStringList temp = mylist[j];
-       mylist[j] = mylist[i];
-       mylist[i] = temp;
-    }
+       {
+          int j = rand()%(i + 1);
+          mylist->swap(i,j);
+       }
+
 }
 
 
