@@ -37,7 +37,7 @@ QPushButton:hover
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton {
+     <string notr="true">#Start {
    color:#000; 
    border-radius:20px;
    font-weight:400;
@@ -45,7 +45,7 @@ QPushButton:hover
    font-size:15px;
    cursor:pointer;
 }
-#pushButton:hover {
+#Start:hover {
 	 background:#fff;
      cursor:pointer;
      margin-right:12px;

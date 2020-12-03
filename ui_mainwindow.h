@@ -27,10 +27,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *start;
+    QPushButton *help;
+    QPushButton *about;
+    QPushButton *exit;
     QLabel *label_heading;
     QLabel *label_pic;
     QLabel *label_footer;
@@ -57,10 +57,10 @@ public:
 "}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(150, 240, 571, 51));
-        pushButton->setStyleSheet(QLatin1String("#pushButton {\n"
+        start = new QPushButton(centralwidget);
+        start->setObjectName(QStringLiteral("start"));
+        start->setGeometry(QRect(150, 240, 571, 51));
+        start->setStyleSheet(QLatin1String("#Start {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   font-weight:400;\n"
@@ -68,16 +68,16 @@ public:
 "   font-size:15px;\n"
 "   cursor:pointer;\n"
 "}\n"
-"#pushButton:hover {\n"
+"#Start:hover {\n"
 "	 background:#fff;\n"
 "     cursor:pointer;\n"
 "     margin-right:12px;\n"
 "	 margin-left:12px;\n"
 "}"));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(150, 320, 571, 51));
-        pushButton_2->setStyleSheet(QLatin1String("#pushButton_2 {\n"
+        help = new QPushButton(centralwidget);
+        help->setObjectName(QStringLiteral("help"));
+        help->setGeometry(QRect(150, 320, 571, 51));
+        help->setStyleSheet(QLatin1String("#pushButton_2 {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
@@ -90,10 +90,10 @@ public:
 "	 margin-right:12px;\n"
 "	 margin-left:12px;\n"
 "}"));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(150, 400, 571, 51));
-        pushButton_3->setStyleSheet(QLatin1String("#pushButton_3 {\n"
+        about = new QPushButton(centralwidget);
+        about->setObjectName(QStringLiteral("about"));
+        about->setGeometry(QRect(150, 400, 571, 51));
+        about->setStyleSheet(QLatin1String("#pushButton_3 {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
@@ -106,10 +106,10 @@ public:
 "     margin-right:12px;\n"
 "	 margin-left:12px;\n"
 "}"));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(150, 480, 571, 51));
-        pushButton_4->setStyleSheet(QLatin1String("#pushButton_4 {\n"
+        exit = new QPushButton(centralwidget);
+        exit->setObjectName(QStringLiteral("exit"));
+        exit->setGeometry(QRect(150, 480, 571, 51));
+        exit->setStyleSheet(QLatin1String("#pushButton_4 {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
@@ -188,10 +188,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "\320\240\320\276\320\267\320\277\320\276\321\207\320\260\321\202\320\270 \320\276\320\277\320\270\321\202\321\203\320\262\320\260\320\275\320\275\321\217", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\277\320\276\320\274\320\276\320\263\320\260", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\321\203", Q_NULLPTR));
-        pushButton_4->setText(QApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", Q_NULLPTR));
+        start->setText(QApplication::translate("MainWindow", "\320\240\320\276\320\267\320\277\320\276\321\207\320\260\321\202\320\270 \320\276\320\277\320\270\321\202\321\203\320\262\320\260\320\275\320\275\321\217", Q_NULLPTR));
+        help->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\277\320\276\320\274\320\276\320\263\320\260", Q_NULLPTR));
+        about->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\321\203", Q_NULLPTR));
+        exit->setText(QApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", Q_NULLPTR));
         label_heading->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:13pt;\">\320\227\320\260\321\201\321\202\320\276\321\201\321\203\320\275\320\276\320\272 \320\264\320\273\321\217 \320\262\320\270\320\261\320\276\321\200\321\203 </span></p><p align=\"center\"><span style=\" font-size:13pt;\">\321\201\320\277\320\265\321\206\321\226\320\260\320\273\321\214\320\275\320\276\321\201\321\202\321\226 \320\264\320\273\321\217 \320\275\320\260\320\262\321\207\320\260\320\275\320\275\321\217 \320\262 \320\235\320\243 &quot;\320\227\320\260\320\277\320\276\321\200\321\226\320\267\321\214\320\272\320\260 \320\277\320\276\320\273\321\226\321\202\320\265\321\205\320\275\321\226\320\272\320\260&quot;</span></p></body></html>", Q_NULLPTR));
         label_pic->setText(QString());
         label_footer->setText(QApplication::translate("MainWindow", "   \302\251 \320\232\320\235\320\242-139  \320\235\320\243 \"\320\227\320\260\320\277\320\276\321\200\321\226\320\267\321\214\320\272\320\260 \320\277\320\276\320\273\321\226\321\202\320\265\321\205\320\275\321\226\320\272\320\260\"", Q_NULLPTR));
