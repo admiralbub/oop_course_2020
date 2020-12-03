@@ -6,7 +6,7 @@ void XML_Data::Init_xml_file_read(QString name_file)
     Init_xml_file(name_file);
     xml_stream_read.setDevice(&file_xml);
     if (!file_xml.open(QIODevice::ReadOnly)){
-       throw (MyException(QString("Не смогли отрыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO)));
+       throw (MyException(QString("Не смогли октрыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO)));
     }
 }
 
@@ -20,7 +20,7 @@ void XML_Data::Init_xml_file_write(QString name_file)
     xml_stream.setDevice(&file_xml);
     Init_xml_file(name_file);
     if (!file_xml.open(QIODevice::WriteOnly)){
-        throw (MyException(QString("Не смогли отрыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO)));
+        throw (MyException(QString("Не смогли открыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO)));
     }
 }
 
@@ -69,7 +69,7 @@ void MyData::OpenForRead(QFile &q, QString name_file)
 {
     InitFile(name_file);
     if (!q.open(QIODevice::ReadOnly)){
-        throw (MyException(QString("Не смогли отрыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO)));
+        throw (MyException(QString("Не смогли открыть файл %1 для чтения").arg(name_file), QString (Q_FUNC_INFO)));
     }
 }
 
@@ -77,7 +77,7 @@ void MyData::OpenForWrite(QFile &q, QString name_file)
 {
     InitFile(name_file);
     if (!q.open(QIODevice::WriteOnly)){
-        throw (MyException(QString("Не смогли отрыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO)));
+        throw (MyException(QString("Не смогли открыть файл %1 для записи").arg(name_file), QString (Q_FUNC_INFO)));
     }
 }
 
