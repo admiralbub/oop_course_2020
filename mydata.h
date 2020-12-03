@@ -8,7 +8,6 @@
 #include <QXmlStreamReader>
 #include "myexception.h"
 
-extern MyException *pMyException;
 
 class XML_Data
 {

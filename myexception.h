@@ -1,60 +1,51 @@
 #ifndef MYEXCEPTION_H
 #define MYEXCEPTION_H
 #include <QException>
-#include <string.h>
-#include <iostream>
+
 #include <QObject>
 #include <QMessageBox>
 #include <QCoreApplication>
-
 #include <QApplication>
+#include <QException>
 
-extern QApplication *pMainApp;
-
-class MyException : QObject{
-    Q_OBJECT
-
-    Q_PROPERTY(QWidget* parentWidget READ parentWidget WRITE setParentWidget)
-    Q_PROPERTY(QString developerFIO READ developerFIO WRITE setDeveloperFIO)
-    Q_PROPERTY(QString developerEMail READ developerEMail WRITE setDeveloperEMail)
-    Q_PROPERTY(QString developerTel READ developerTel WRITE setDeveloperTel)
-    Q_PROPERTY(QString errorMessageTemplate READ errorMessageTemplate WRITE setErrorMessageTemplate)
-
+class MyException : public QException {
 public:
-    MyException(QObject *parent = nullptr);
-    ~MyException();
+    MyException(QString message, QString methodName);
 
-    Q_SLOT void throwException (QString msg, QString functionName);
+    void raise() const override { throw *this; }
+    MyException *clone() const override { return new MyException(*this); }
 
-    QWidget* parentWidget() const;
-    Q_SLOT void setParentWidget(QWidget* parentWidget);
+    static QString developerFIO();
+    static void setDeveloperFIO(QString developerFIO);
 
-    QString developerFIO() const;
-    Q_SLOT void setDeveloperFIO(QString developerFIO);
+    static QString developerTel() ;
+    static void setDeveloperTel(QString developerTel);
 
-    QString developerTel() const;
-    Q_SLOT void setDeveloperTel(QString developerTel);
+    static QString developerEMail();
+    static void setDeveloperEMail(QString developerEMail);
 
-    QString developerEMail() const;
-    Q_SLOT void setDeveloperEMail(QString developerEMail);
+    static QString errorMessageTemplate();
+    static void setErrorMessageTemplate(QString errorMessageTemplate);
 
-    QString errorMessageTemplate() const;
-    Q_SLOT void setErrorMessageTemplate(QString errorMessageTemplate);
     QString getErrorMessage(QString message, QString method);
-public slots:
+    QString getErrorMessage();
 
+    QString message() const;
+    void setMessage(QString message);
 
-signals:
+    QString methodName() const;
+    void setMethodName(QString methodName);
 
 
 private:
-    QWidget* m_parentWidget = nullptr;
-    void quitApp();
 
-    QString m_developerFIO;
-    QString m_developerTel;
-    QString m_developerEMail;
-    QString m_errorMessageTemplate;
+    static QString m_developerFIO;
+    static QString m_developerTel;
+    static QString m_developerEMail;
+    static QString m_errorMessageTemplate;
+
+    QString m_message;
+    QString m_methodName;
 };
 
 #endif // MYEXCEPTION_H

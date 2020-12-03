@@ -1,34 +1,20 @@
 #include "myexception.h"
+
 #include "mainwindow.h"
 
-MyException::MyException(QObject *parent) : QObject(parent)
-{
+//устанавливаем статики
+QString MyException::m_developerFIO = "";
+QString MyException::m_developerTel = "";
+QString MyException::m_developerEMail = "";
+QString MyException::m_errorMessageTemplate = "";
 
+MyException::MyException(QString message, QString methodName) : QException ()
+{
+    setMessage(message);
+    setMethodName(methodName);
 }
 
-MyException::~MyException()
-{
-
-}
-
-void MyException::throwException(QString msg, QString functionName)
-{
-    QString errorMsg = getErrorMessage(msg, functionName);
-    QMessageBox::critical(m_parentWidget, QString ("Ошибка в %1").arg(functionName), errorMsg);
-    quitApp();
-}
-
-QWidget *MyException::parentWidget() const
-{
-    return m_parentWidget;
-}
-
-void MyException::setParentWidget(QWidget *parentWidget)
-{
-    m_parentWidget = parentWidget;
-}
-
-QString MyException::developerFIO() const
+QString MyException::developerFIO()
 {
     return m_developerFIO;
 }
@@ -38,7 +24,7 @@ void MyException::setDeveloperFIO(QString developerFIO)
     m_developerFIO = developerFIO;
 }
 
-QString MyException::developerTel() const
+QString MyException::developerTel()
 {
     return m_developerTel;
 }
@@ -51,7 +37,7 @@ void MyException::setDeveloperTel(QString developerTel)
     m_developerTel = developerTel;
 }
 
-QString MyException::developerEMail() const
+QString MyException::developerEMail()
 {
     return m_developerEMail;
 }
@@ -61,7 +47,7 @@ void MyException::setDeveloperEMail(QString developerEMail)
     m_developerEMail = developerEMail;
 }
 
-QString MyException::errorMessageTemplate() const
+QString MyException::errorMessageTemplate()
 {
     return m_errorMessageTemplate;
 }
@@ -80,8 +66,27 @@ QString MyException::getErrorMessage(QString message, QString method)
             replace("{errorMsg}", message).replace("{method}", method);
 }
 
-void MyException::quitApp()
+QString MyException::getErrorMessage()
 {
-    m_parentWidget->close();
-    m_parentWidget->deleteLater();
+    return getErrorMessage(message(), methodName());
+}
+
+QString MyException::message() const
+{
+    return m_message;
+}
+
+QString MyException::methodName() const
+{
+    return m_methodName;
+}
+
+void MyException::setMessage(QString message)
+{
+    m_message = message;
+}
+
+void MyException::setMethodName(QString methodName)
+{
+    m_methodName = methodName;
 }
