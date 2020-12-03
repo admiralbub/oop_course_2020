@@ -37,7 +37,7 @@ QPushButton:hover
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#Start {
+     <string notr="true">#start {
    color:#000; 
    border-radius:20px;
    font-weight:400;
@@ -45,7 +45,7 @@ QPushButton:hover
    font-size:15px;
    cursor:pointer;
 }
-#Start:hover {
+#start:hover {
 	 background:#fff;
      cursor:pointer;
      margin-right:12px;
@@ -66,14 +66,14 @@ QPushButton:hover
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_2 {
+     <string notr="true">#help {
    color:#000; 
    border-radius:20px;
    background:#FFD200;
    font-size:15px;
    cursor:pointer;
 }
-#pushButton_2:hover {
+#help:hover {
 	 background:#fff;
      cursor:pointer;
 	 margin-right:12px;
@@ -94,14 +94,14 @@ QPushButton:hover
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_3 {
+     <string notr="true">#about {
    color:#000; 
    border-radius:20px;
    background:#FFD200;
    font-size:15px;
    cursor:pointer;
 }
-#pushButton_3:hover {
+#about:hover {
 	 background:#fff;
      cursor:pointer;
      margin-right:12px;
@@ -122,14 +122,14 @@ QPushButton:hover
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pushButton_4 {
+     <string notr="true">#exit {
    color:#000; 
    border-radius:20px;
    background:#FFD200;
    font-size:15px;
    cursor:pointer;
 }
-#pushButton_4:hover {
+#exit:hover {
 	 background:#fff;
      cursor:pointer;
      margin-right:12px;
