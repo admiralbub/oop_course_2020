@@ -60,7 +60,7 @@ public:
         start = new QPushButton(centralwidget);
         start->setObjectName(QStringLiteral("start"));
         start->setGeometry(QRect(150, 240, 571, 51));
-        start->setStyleSheet(QLatin1String("#Start {\n"
+        start->setStyleSheet(QLatin1String("#start {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   font-weight:400;\n"
@@ -68,7 +68,7 @@ public:
 "   font-size:15px;\n"
 "   cursor:pointer;\n"
 "}\n"
-"#Start:hover {\n"
+"#start:hover {\n"
 "	 background:#fff;\n"
 "     cursor:pointer;\n"
 "     margin-right:12px;\n"
@@ -77,14 +77,14 @@ public:
         help = new QPushButton(centralwidget);
         help->setObjectName(QStringLiteral("help"));
         help->setGeometry(QRect(150, 320, 571, 51));
-        help->setStyleSheet(QLatin1String("#pushButton_2 {\n"
+        help->setStyleSheet(QLatin1String("#help {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
 "   font-size:15px;\n"
 "   cursor:pointer;\n"
 "}\n"
-"#pushButton_2:hover {\n"
+"#help:hover {\n"
 "	 background:#fff;\n"
 "     cursor:pointer;\n"
 "	 margin-right:12px;\n"
@@ -93,14 +93,14 @@ public:
         about = new QPushButton(centralwidget);
         about->setObjectName(QStringLiteral("about"));
         about->setGeometry(QRect(150, 400, 571, 51));
-        about->setStyleSheet(QLatin1String("#pushButton_3 {\n"
+        about->setStyleSheet(QLatin1String("#about {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
 "   font-size:15px;\n"
 "   cursor:pointer;\n"
 "}\n"
-"#pushButton_3:hover {\n"
+"#about:hover {\n"
 "	 background:#fff;\n"
 "     cursor:pointer;\n"
 "     margin-right:12px;\n"
@@ -109,14 +109,14 @@ public:
         exit = new QPushButton(centralwidget);
         exit->setObjectName(QStringLiteral("exit"));
         exit->setGeometry(QRect(150, 480, 571, 51));
-        exit->setStyleSheet(QLatin1String("#pushButton_4 {\n"
+        exit->setStyleSheet(QLatin1String("#exit {\n"
 "   color:#000; \n"
 "   border-radius:20px;\n"
 "   background:#FFD200;\n"
 "   font-size:15px;\n"
 "   cursor:pointer;\n"
 "}\n"
-"#pushButton_4:hover {\n"
+"#exit:hover {\n"
 "	 background:#fff;\n"
 "     cursor:pointer;\n"
 "     margin-right:12px;\n"
