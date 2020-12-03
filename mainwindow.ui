@@ -27,7 +27,7 @@ QPushButton:hover
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="start">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -56,7 +56,7 @@ QPushButton:hover
      <string>Розпочати опитування</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="help">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -84,7 +84,7 @@ QPushButton:hover
      <string>Допомога</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="about">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -112,7 +112,7 @@ QPushButton:hover
      <string>Про програму</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="exit">
     <property name="geometry">
      <rect>
       <x>150</x>

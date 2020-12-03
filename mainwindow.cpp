@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
 
     setMinimumSize(877, 641);
-            setMaximumSize(877, 641);
+    setMaximumSize(877, 641);
 
     // Инициализируем  окно о авторе
     sWindow = new AboutWindow();
@@ -57,27 +57,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::on_pushButton_4_clicked()
-{
-     MainWindow ::close();  // Закрытие программы
-}
 
-void MainWindow::on_pushButton_clicked()
-{
-    testWindow->show();  // Показываем  окно с тестами
-    this->close();    // Закрываем основное окно
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    sWindow->show();  // Показываем  окно о авторе
-    this->close();    // Закрываем основное окно
-}
-void MainWindow::on_pushButton_2_clicked()
-{
-    thirdWindow->show();  // Показываем  окно о помощье
-    this->close();    // Закрываем основное окно
-}
 
 void MainWindow::on_button_mus_clicked()
 {
@@ -86,10 +66,34 @@ void MainWindow::on_button_mus_clicked()
 
 }
 
-
-
 void MainWindow::on_button_nomus_clicked()
 {
     ui->button_nomus->setVisible(false);
     ui->button_mus->setVisible(true);
+}
+
+
+
+
+void MainWindow::on_start_clicked()
+{
+    testWindow->show();  // Показываем  окно с тестами
+    this->close();    // Закрываем основное окно
+}
+
+void MainWindow::on_help_clicked()
+{
+    thirdWindow->show();  // Показываем  окно о помощье
+    this->close();    // Закрываем основное окно
+}
+
+void MainWindow::on_about_clicked()
+{
+    sWindow->show();  // Показываем  окно о авторе
+    this->close();    // Закрываем основное окно
+}
+
+void MainWindow::on_exit_clicked()
+{
+    MainWindow ::close();  // Закрытие программы
 }
