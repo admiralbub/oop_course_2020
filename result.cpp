@@ -1,9 +1,6 @@
 #include "result.h"
 
-Result::Result()
-{
-
-}
+Result::Result() {}
 
 QString Result::getName() {
     return name;

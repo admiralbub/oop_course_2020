@@ -7,7 +7,6 @@ HelpWindow::HelpWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::HelpWindow) {
     ui->setupUi(this);
-
     setWindowTitle("Допомога щодо використання програми");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     setMinimumSize(877, 641);
@@ -16,13 +15,12 @@ HelpWindow::HelpWindow(QWidget *parent) :
     //Подгружаем основное лого ЗНТУ
     QPixmap pix(":/resources/image/header-object.png");
     ui->label_pic->setPixmap(pix.scaled(100,600,Qt::KeepAspectRatio));
-
 }
+
 HelpWindow::~HelpWindow()
 {
     delete ui;
 }
-
 
 void HelpWindow::on_back_clicked()
 {
@@ -31,12 +29,10 @@ void HelpWindow::on_back_clicked()
 
 }
 
-
 void HelpWindow::on_telegram_clicked()
 {
     QString link = "http://t.me/artemdikarev";
     QDesktopServices::openUrl(QUrl(link));
-
 }
 
 void HelpWindow::on_viber_clicked()

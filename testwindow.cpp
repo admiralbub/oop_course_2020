@@ -84,7 +84,6 @@ void TestWindow::Randomize_questions()
           int j = rand()%(i + 1);
           mylist->swap(i,j);
        }
-
 }
 
 void TestWindow::ReadFile()

@@ -33,7 +33,6 @@ void MyException::setDeveloperTel(QString developerTel)
 {
     if (m_developerTel == developerTel)
         return;
-
     m_developerTel = developerTel;
 }
 

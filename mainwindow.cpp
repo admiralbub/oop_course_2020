@@ -41,16 +41,14 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
        music->play();
        viz = false;
     }
-
     connect(ui->button_mus, &QPushButton::clicked, music, &QMediaPlayer::pause);
     connect(ui->button_nomus, &QPushButton::clicked, music, &QMediaPlayer::play);
 
-     ui->button_nomus->setVisible(false);
+    ui->button_nomus->setVisible(false);
 
-     connect(music, &QMediaPlayer::mediaStatusChanged, this, [=]() {
-          qDebug() << "Media Status:" << music->mediaStatus();
-
-     });
+    connect(music, &QMediaPlayer::mediaStatusChanged, this, [=]() {
+        qDebug() << "Media Status:" << music->mediaStatus();
+    });
 }
 
 MainWindow::~MainWindow()
@@ -58,12 +56,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_button_mus_clicked()
 {
     ui->button_mus->setVisible(false);
     ui->button_nomus->setVisible(true);
-
 }
 
 void MainWindow::on_button_nomus_clicked()
@@ -71,9 +67,6 @@ void MainWindow::on_button_nomus_clicked()
     ui->button_nomus->setVisible(false);
     ui->button_mus->setVisible(true);
 }
-
-
-
 
 void MainWindow::on_start_clicked()
 {
