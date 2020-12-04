@@ -11,6 +11,7 @@ ResultWindow::ResultWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     setMinimumSize(877, 672);
     setMaximumSize(877, 672);
+     setWindowIcon(QIcon(":/resources/image/header-object.png"));
     specialitytest = new SpecialtyWindow();
     connect(specialitytest, &SpecialtyWindow::resultspecialy, this, &ResultWindow::show);
 }
