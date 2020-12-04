@@ -12,7 +12,7 @@ TestWindow::TestWindow(QWidget *parent) :
     setWindowTitle("Застосунок для вибору спеціальності для навчання в НУ Запорізька політехніка!");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     setMinimumSize(877, 641);
-            setMaximumSize(877, 641);
+    setMaximumSize(877, 641);
     //Тут грузим картинку для теста
     // Инициализируем третье окно
     resultWindow = new ResultWindow();
@@ -123,7 +123,6 @@ void TestWindow::Randomize_questions()
 
 }
 
-
 void TestWindow::ReadFile()
 {
     if(Process_Questions_count())
@@ -135,7 +134,6 @@ void TestWindow::ReadFile()
         {
             QString convert_int;
             ui->label_score->setText("Питання " + convert_int.setNum(data->counter_question) + " з 16");
-
         }
     }
 }
@@ -184,4 +182,3 @@ void TestWindow::Restart_test()
     // Считываем новый вопрос
     ReadFile();
 }
-

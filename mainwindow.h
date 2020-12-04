@@ -22,17 +22,11 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_button_mus_clicked();
-
     void on_button_nomus_clicked();
-
     void on_start_clicked();
-
     void on_help_clicked();
-
     void on_about_clicked();
-
     void on_exit_clicked();
 
 private:

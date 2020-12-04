@@ -16,7 +16,6 @@ SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     setMinimumSize(877, 672);
     setMaximumSize(877, 672);
     resultdata = new XML_Data();
-
 }
 
 SpecialtyWindow::~SpecialtyWindow()
@@ -35,19 +34,7 @@ void SpecialtyWindow::on_menu_button_clicked()
     this->close();
     auto win = new MainWindow();
     win->show();
-
 }
-
-void SpecialtyWindow::ReadSpeciality()
-{
-    resultdata->xml_stream_read.readNextStartElement();
-    while(resultdata->xml_stream_read.name() == "speciality")
-    {
-        all_speciality += resultdata->xml_stream_read.readElementText() + "\n";
-        resultdata->xml_stream_read.readNextStartElement();
-    }
-}
-
 
 void SpecialtyWindow::WriteSpecialityinTextBrowser(QStringList &l)
 {
@@ -55,9 +42,7 @@ void SpecialtyWindow::WriteSpecialityinTextBrowser(QStringList &l)
        while(resultdata->xml_stream_read.readNextStartElement())
        {
              while(resultdata->xml_stream_read.name() != "direction")
-             {
                  resultdata->xml_stream_read.readNextStartElement();
-             }
              foreach(const QXmlStreamAttribute &attr, resultdata->xml_stream_read.attributes())
              {
                  if(attr.name() == "name")
@@ -65,12 +50,16 @@ void SpecialtyWindow::WriteSpecialityinTextBrowser(QStringList &l)
                      QString attribute_value = attr.value().toString();
                      if(l.contains(attr.value().toString()))
                      {
-                           ReadSpeciality();
+                         resultdata->xml_stream_read.readNextStartElement();
+                         while(resultdata->xml_stream_read.name() == "speciality")
+                         {
+                             all_speciality += resultdata->xml_stream_read.readElementText() + "\n";
+                             resultdata->xml_stream_read.readNextStartElement();
+                         }
                      }
                  }
              }
        }
-
   ui->textBrowser->setText(all_speciality);
   ui->textBrowser->setStyleSheet("font-size:16px");
   resultdata->file_xml.close();

@@ -14,6 +14,7 @@ public:
     void setCode(QString scode);
     void setRes(double sres);
     void set(QString sname, QString scode, double sres);
+
 private:
     QString name;
     QString code;

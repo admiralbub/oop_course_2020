@@ -21,6 +21,7 @@ public:
     ~ResultWindow();
 signals:
     void resultWindow();
+
 private slots:
     void on_direction_clicked();
     void on_first_clicked();
@@ -31,6 +32,7 @@ private:
     XML_Data xml_data;
     QString Remark;
     Result r[5];
+
 private:
     void InitStructResult();
     void Count_Percent();
@@ -39,6 +41,7 @@ private:
     void SetIntValue();
     void Sort();
     void AddNameDirection_for_parse();
+
 public:
     QStringList Direction_name;
     void SetResults();

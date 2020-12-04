@@ -19,6 +19,7 @@ public:
     void Write_Root_Element();
     void Write_End_Root_Element();
     void CloseFile();
+
 private:
     int number_all_questions;
     void InitFile(QString name_file);

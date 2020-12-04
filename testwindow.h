@@ -16,27 +16,22 @@ class TestWindow : public QMainWindow
 public:
     explicit TestWindow(QWidget *parent = nullptr);
     ~TestWindow();
+
 private:
     void ReadFile();
     bool Process_Questions_count();
+
 signals:
     void firstWindow();
+
 private slots:
-
     void on_pushButton_menu_clicked();
-
     void on_answer_1_clicked();
-
     void on_answer_2_clicked();
-
     void on_answer_3_clicked();
-
     void Restart_test();
-
     void Read_questions();
-
     void Randomize_questions();
-
     void on_pushButton_first_clicked();
 
 private:
