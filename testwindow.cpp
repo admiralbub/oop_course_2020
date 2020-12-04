@@ -13,6 +13,7 @@ TestWindow::TestWindow(QWidget *parent) :
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     setMinimumSize(877, 641);
     setMaximumSize(877, 641);
+    setWindowIcon(QIcon(":/resources/image/header-object.png"));
     //Тут грузим картинку для теста
     // Инициализируем третье окно
     resultWindow = new ResultWindow();

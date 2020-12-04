@@ -8,7 +8,7 @@ AboutWindow::AboutWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Інформація про розробників");
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
-
+    setWindowIcon(QIcon(":/resources/image/header-object.png"));
     QPixmap pix(":/resources/image/vstup-na-budzhet-2019_1.jpg");
     ui->label_image->setPixmap(pix.scaled(300,600,Qt::KeepAspectRatio));
     setMinimumSize(877, 641);
