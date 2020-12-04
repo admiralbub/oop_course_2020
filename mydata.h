@@ -1,25 +1,8 @@
 #ifndef MYDATA_H
 #define MYDATA_H
 
-#include <QFile>
 #include <QTextStream>
-#include <QString>
-#include <QXmlStreamWriter>
-#include <QXmlStreamReader>
-#include "myexception.h"
-
-
-class XML_Data
-{
-public:
-    QXmlStreamWriter xml_stream;
-    QXmlStreamReader xml_stream_read;
-    QFile file_xml;
-    void Init_xml_file_write(QString name_file);
-    void Init_xml_file_read(QString name_file);
-private:
-    void Init_xml_file(QString name_file);
-};
+#include "xml_data.h"
 
 class MyData: public XML_Data
 {

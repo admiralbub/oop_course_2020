@@ -3,6 +3,7 @@
 #include <QTextCodec>
 #include <QDir>
 #include <QDebug>
+
 TestWindow::TestWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TestWindow)

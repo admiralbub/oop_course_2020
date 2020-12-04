@@ -38,40 +38,40 @@ void ResultWindow::ReturnNameDirection_for_parse() {
 }
 
 void ResultWindow::AddNameDirection_for_parse() {
-   Direction_name.push_back(Result[1].code);
+   Direction_name.push_back(r[1].getCode());
    for (int i=2; i<=4; i++)
-       if (Result[1].res == Result[i].res)
-           Direction_name.push_back(Result[i].code);
+       if (r[1].getRes() == r[i].getRes())
+           Direction_name.push_back(r[i].getCode());
 }
 
 void ResultWindow::Sort() {
-    result temp;
+    Result temp;
     for (int i=0; i<4; i++)
         for (int j=1; j<4-i; j++)
-            if (Result[j].res < Result[j+1].res) {
-                temp = Result[j];
-                Result[j] = Result[j+1];
-                Result[j+1] = temp;
+            if (r[j].getRes() < r[j+1].getRes()) {
+                temp = r[j];
+                r[j] = r[j+1];
+                r[j+1] = temp;
             }
 }
 
 void ResultWindow::SetIntValue() {
-    ui->system_1->setText(Result[1].name);
-    ui->system_2->setText(Result[2].name);
-    ui->system_3->setText(Result[3].name);
-    ui->system_4->setText(Result[4].name);
+    ui->system_1->setText(r[1].getName());
+    ui->system_2->setText(r[2].getName());
+    ui->system_3->setText(r[3].getName());
+    ui->system_4->setText(r[4].getName());
     ui->system_1->setStyleSheet("font-size:20px;");
     ui->system_2->setStyleSheet("font-size:20px;");
     ui->system_3->setStyleSheet("font-size:20px;");
     ui->system_4->setStyleSheet("font-size:20px;");
-    ui->balls_1->setText(QString::number(Result[1].res) + " %");
-    ui->balls_2->setText(QString::number(Result[2].res) + " %");
-    ui->balls_3->setText(QString::number(Result[3].res) + " %");
-    ui->balls_4->setText(QString::number(Result[4].res) + " %");
-    SetColorPercent(ui->balls_1, Result[1].res);
-    SetColorPercent(ui->balls_2, Result[2].res);
-    SetColorPercent(ui->balls_3, Result[3].res);
-    SetColorPercent(ui->balls_4, Result[4].res);
+    ui->balls_1->setText(QString::number(r[1].getRes()) + " %");
+    ui->balls_2->setText(QString::number(r[2].getRes()) + " %");
+    ui->balls_3->setText(QString::number(r[3].getRes()) + " %");
+    ui->balls_4->setText(QString::number(r[4].getRes()) + " %");
+    SetColorPercent(ui->balls_1, r[1].getRes());
+    SetColorPercent(ui->balls_2, r[2].getRes());
+    SetColorPercent(ui->balls_3, r[3].getRes());
+    SetColorPercent(ui->balls_4, r[4].getRes());
 }
 
 void ResultWindow::SetColorPercent(QLabel *l, double value) {
@@ -85,10 +85,10 @@ void ResultWindow::SetColorPercent(QLabel *l, double value) {
 }
 
 void ResultWindow::SetResults() {
-    Result[1] = {"Робота з людьми", "Man-Man", 0};
-    Result[2] = {"Робота з технікою", "Man-Technics", 0};
-    Result[3] = {"Творча робота", "Man-Artistic-image", 0};
-    Result[4] = {"Робота зі знаковою системою", "Man-Sign-system", 0};
+    r[1].set("Робота з людьми", "Man-Man", 0);
+    r[2].set("Робота з технікою", "Man-Technics", 0);
+    r[3].set("Творча робота", "Man-Artistic-image", 0);
+    r[4].set("Робота зі знаковою системою", "Man-Sign-system", 0);
 
     xml_data.Init_xml_file_read("../oop_course_2020/DataBase/answer_directions.xml");
         while(xml_data.xml_stream_read.readNextStartElement()) {
@@ -96,14 +96,14 @@ void ResultWindow::SetResults() {
             foreach(const QXmlStreamAttribute &attr, xml_data.xml_stream_read.attributes()) {
                 if(attr.name() == "name") {
                     QString attribute_value = attr.value().toString();
-                    if(attr.value().toString() == Result[1].code)
-                        Result[1].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
-                    else if(attr.value().toString() == Result[2].code)
-                        Result[2].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
-                    else if(attr.value().toString() == Result[3].code)
-                        Result[3].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
+                    if(attr.value().toString() == r[1].getCode())
+                        r[1].setRes(xml_data.xml_stream_read.readElementText().toDouble()*12.5);
+                    else if(attr.value().toString() == r[2].getCode())
+                        r[2].setRes(xml_data.xml_stream_read.readElementText().toDouble()*12.5);
+                    else if(attr.value().toString() == r[3].getCode())
+                        r[3].setRes(xml_data.xml_stream_read.readElementText().toDouble()*12.5);
                     else
-                        Result[4].res = xml_data.xml_stream_read.readElementText().toDouble()*12.5;
+                        r[4].setRes(xml_data.xml_stream_read.readElementText().toDouble()*12.5);
                 }
              }
          }

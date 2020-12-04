@@ -21,9 +21,11 @@ SOURCES += \
     mainwindow.cpp \
     mydata.cpp \
     myexception.cpp \
+    result.cpp \
     resultwindow.cpp \
     specialtywindow.cpp \
-    testwindow.cpp
+    testwindow.cpp \
+    xml_data.cpp
 
 HEADERS += \
     aboutwindow.h \
@@ -31,9 +33,11 @@ HEADERS += \
     mainwindow.h \
     mydata.h \
     myexception.h \
+    result.h \
     resultwindow.h \
     specialtywindow.h \
-    testwindow.h
+    testwindow.h \
+    xml_data.h
 
 FORMS += \
     aboutwindow.ui \

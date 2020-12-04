@@ -25,8 +25,6 @@ private slots:
 
     void on_button_mus_clicked();
 
-
-
     void on_button_nomus_clicked();
 
     void on_start_clicked();

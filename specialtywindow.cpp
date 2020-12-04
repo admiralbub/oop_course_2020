@@ -5,6 +5,7 @@
 #include <QUrl>
 #include <QThread>
 #include <QMediaPlayer>
+
 SpecialtyWindow::SpecialtyWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SpecialtyWindow)
