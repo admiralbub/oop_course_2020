@@ -2,9 +2,10 @@
 #define TESTWINDOW_H
 
 #include <QMainWindow>
-#include <resultwindow.h>
-#include <mydata.h>
-#include <resultwindow.h>
+#include "mydata.h"
+#include "resultwindow.h"
+#include "result.h"
+
 namespace Ui {
 class TestWindow;
 }
@@ -40,17 +41,9 @@ private:
     MyData *data;
     QStringList l;
     QStringList *mylist;
-    struct Directions_name
-    {
-        int Man_Man;
-        int Man_Technics;
-        int Man_Artistic_Image;
-        int Man_Sign_System;
-    };
-    Directions_name MainStruct;
+    Result rr[5];
     void Init_Struct_Dir_name();
-    void Count_direct_score_if_answer_true();
-    void Count_direct_score_if_answer_not_determined();
+    void Count_score(int score);
 };
 
 #endif // TESTWINDOW_H

@@ -31,10 +31,10 @@ TestWindow::TestWindow(QWidget *parent) :
 
 void TestWindow::Init_Struct_Dir_name()
 {
-    MainStruct.Man_Man = 0;
-    MainStruct.Man_Technics = 0;
-    MainStruct.Man_Sign_System = 0;
-    MainStruct.Man_Artistic_Image = 0;
+    rr[1].set("Робота з людьми", "Man-Man", 0);
+    rr[2].set("Робота з технікою", "Man-Technics", 0);
+    rr[3].set("Творча робота", "Man-Artistic-image", 0);
+    rr[4].set("Робота зі знаковою системою", "Man-Sign-system", 0);
 }
 
 TestWindow::~TestWindow()
@@ -48,10 +48,8 @@ bool TestWindow::Process_Questions_count()
     if(data->counter_question == data->getNumberAlQuestions()) // если текущий вопрос равен кол-ву вопросов(последний)
     {
         data->Write_Root_Element();
-        data->Write_Answer_in_file("Man-Man",QString::number(MainStruct.Man_Man));
-        data->Write_Answer_in_file("Man-Technics",QString::number(MainStruct.Man_Technics));
-        data->Write_Answer_in_file("Man-Artistic-image",QString::number(MainStruct.Man_Artistic_Image));
-        data->Write_Answer_in_file("Man-Sign-system",QString::number(MainStruct.Man_Sign_System));
+        for (int i=1; i<=4; i++)
+            data->Write_Answer_in_file(rr[i].getCode(), QString::number(rr[i].getRes()));
         data->Write_End_Root_Element();
         data->CloseFile();
         // Закрывать xml файл не надо, он закрывается одновременно с файлом с вопросами! функция data->CloseFile
@@ -64,45 +62,11 @@ bool TestWindow::Process_Questions_count()
     return true;
 }
 
-void TestWindow::Count_direct_score_if_answer_true()
+void TestWindow::Count_score(int score)
 {
-   if(l[1] == "Man-Man")
-   {
-       MainStruct.Man_Man+=2;
-   }
-   else if(l[1] == "Man-Technics")
-   {
-       MainStruct.Man_Technics+=2;
-   }
-   else if(l[1] == "Man-Artistic-image")
-   {
-       MainStruct.Man_Artistic_Image+=2;
-   }
-   else
-   {
-       MainStruct.Man_Sign_System+=2;
-   }
-
-}
-
-void TestWindow::Count_direct_score_if_answer_not_determined()
-{
-    if(l[1] == "Man-Man")
-    {
-        MainStruct.Man_Man+=1;
-    }
-    else if(l[1] == "Man-Technics")
-    {
-        MainStruct.Man_Technics+=1;
-    }
-    else if(l[1] == "Man-Artistic-image")
-    {
-        MainStruct.Man_Artistic_Image+=1;
-    }
-    else
-    {
-        MainStruct.Man_Sign_System+=1;
-    }
+   for (int i=1; i<=4; i++)
+       if(l[1] == rr[i].getCode())
+           rr[i].setRes(rr[i].getRes()+score);
 }
 
 void TestWindow::Read_questions()
@@ -146,7 +110,7 @@ void TestWindow::on_pushButton_menu_clicked()
 
 void TestWindow::on_answer_1_clicked()
 {
-    Count_direct_score_if_answer_true();
+    Count_score(2);
     ReadFile();
 }
 
@@ -157,7 +121,7 @@ void TestWindow::on_answer_2_clicked()
 
 void TestWindow::on_answer_3_clicked()
 {
-    Count_direct_score_if_answer_not_determined();
+    Count_score(1);
     ReadFile();
 }
 
