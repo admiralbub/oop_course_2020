@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     ui->label_pic->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl("qrc:/resources/sounds/Гражданская Оборона - Свой среди чужих.mp3"));
+    playlist->addMedia(QUrl("qrc:/resources/sounds/music.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();

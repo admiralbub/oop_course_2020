@@ -8,6 +8,6 @@
         <file>DataBase/speciality.xml</file>
         <file>image/sound off.png</file>
         <file>image/sound on.png</file>
-        <file>sounds/Гражданская Оборона - Свой среди чужих.mp3</file>
+        <file>sounds/music.mp3</file>
     </qresource>
 </RCC>
